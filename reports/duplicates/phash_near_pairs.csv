@@ -1,0 +1,21 @@
+split_a,id_a,file_a,split_b,id_b,file_b,hamming,kind,cross_split,confirmé_orb,splits
+train,108,000108.jpg,train,1590,001590.jpg,8,phash,False,True,train ↔ train
+train,473,000473.jpg,val,790,000790.jpg,2,phash,True,True,train ↔ val
+train,499,000499.jpg,train,1881,001881.jpg,8,phash,False,True,train ↔ train
+train,586,000586.jpg,train,1202,001202.jpg,10,phash,False,False,train ↔ train
+train,826,000826.jpg,train,1097,001097.jpg,10,phash,False,False,train ↔ train
+train,1138,001138.jpg,train,2497,002497.jpg,10,phash,False,False,train ↔ train
+train,1319,001319.jpg,train,3010,003010.jpg,8,phash,False,False,train ↔ train
+train,1454,001454.jpg,val,3963,003963.jpg,8,phash,True,False,train ↔ val
+train,1624,001624.jpg,train,2649,002649.jpg,8,phash,False,True,train ↔ train
+train,1626,001626.jpg,train,2774,002774.jpg,0,phash,False,True,train ↔ train
+train,1738,001738.jpg,train,1739,001739.jpg,10,phash,False,False,train ↔ train
+train,1841,001841.jpg,val,2868,002868.jpg,10,phash,True,False,train ↔ val
+train,1882,001882.jpg,val,3840,003840.jpg,6,phash,True,True,train ↔ val
+train,1883,001883.jpg,val,3843,003843.jpg,4,phash,True,True,train ↔ val
+train,2099,002099.jpg,train,3617,003617.jpg,10,phash,False,False,train ↔ train
+train,2319,002319.jpg,train,2756,002756.jpg,10,phash,False,False,train ↔ train
+train,2747,002747.jpg,train,3023,003023.jpg,10,phash,False,False,train ↔ train
+train,2864,002864.jpg,test,2810,002810.jpg,10,phash,True,False,train ↔ test
+train,3104,003104.jpg,val,254,000254.jpg,10,phash,True,True,train ↔ val
+train,3623,003623.jpg,val,2815,002815.jpg,6,phash,True,True,train ↔ val

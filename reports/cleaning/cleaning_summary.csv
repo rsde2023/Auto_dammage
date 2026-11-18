@@ -1,0 +1,4 @@
+split,images (officiel),images (propre),images retirées,annotations (officiel),annotations (propre),% annotations retirées
+train,2816,2816,0,6211,6211,0.0
+val,810,774,36,1744,1666,4.5
+test,374,364,10,785,761,3.1
