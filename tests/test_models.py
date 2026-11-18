@@ -45,7 +45,7 @@ def test_svm_is_class_balanced():
 
 def test_final_svm_gives_probabilities():
     X, y, tr, _ = _toy_data()
-    pipe = build_pipeline({"model": "svm", "pca": None, "C": 1, "gamma": 0.1}, probability=True).fit(X[tr], y[tr])
+    pipe = train.fit_final({"model": "svm", "pca": None, "C": 1, "gamma": 0.1}, X[tr], y[tr])
     assert pipe.predict_proba(X[:5]).sum(axis=1) == pytest.approx(np.ones(5))
 
 

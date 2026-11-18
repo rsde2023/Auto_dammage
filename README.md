@@ -63,7 +63,7 @@ python -m pip install -r requirements.txt
 python -m pytest -v
 ```
 
-Résultat attendu : `44 passed`.
+Résultat attendu : `47 passed`.
 
 Pour lancer un seul fichier de tests (plus rapide quand on travaille sur une partie précise) :
 
@@ -72,11 +72,13 @@ python -m pytest tests/test_coco_loader.py -v
 python -m pytest tests/test_cleaning.py -v
 python -m pytest tests/test_features.py -v
 python -m pytest tests/test_models.py -v
+python -m pytest tests/test_evaluation.py -v
 ```
 
 | Fichier | Ce qu'il vérifie | Résultat attendu |
 |---|---|---|
 | `test_coco_loader.py` | lecture des JSON COCO et de `image_info.xlsx` | `10 passed` |
+| `test_evaluation.py` | métriques (F1 macro, accuracy) et intervalle de confiance par bootstrap | `3 passed` |
 | `test_cleaning.py` | contrôles qualité, SHA-256/pHash, quasi-doublons, politique de nettoyage | `7 passed` |
 | `test_features.py` | recadrage, patch 128×128, dimensions HOG/couleur/texture (1764/40/36), pas de NaN | `17 passed` |
 | `test_models.py` | pipelines, recherche d'hyperparamètres, sauvegarde du modèle, prédiction avec le même prétraitement qu'à l'entraînement | `10 passed` |
@@ -98,6 +100,7 @@ puis ouvrir les notebooks dans l'ordre et choisir le noyau `.venv` :
 | `02_data_cleaning.ipynb` | contrôle qualité, quasi-doublons, décisions de nettoyage | ≈ 5 min |
 | `03_feature_engineering.ipynb` | conversion des régions en vecteurs, choix mesurés des descripteurs | ≈ 15 min |
 | `04_modeling.ipynb` | KNN / SVM / Random Forest : réglage, comparaison, modèle retenu (après l'étape 9) | ≈ 3 min |
+| `05_evaluation.ipynb` | évaluation finale sur le test, fiabilité des probabilités, analyse des erreurs (après l'étape 10) | ≈ 3 min |
 
 ### 8. Calculer les descripteurs (phase 3)
 
@@ -123,6 +126,15 @@ python -m src.models.train
 Si `reports/modeling/search_results.csv` existe déjà (il est sur GitHub), la recherche n'est pas relancée : seuls les modèles finaux
 sont réentraînés (quelques minutes). `--force-search` relance toute la recherche (≈ 10 à 15 min).
 
+### 10. Évaluer sur le jeu de test (phase 5)
+
+Évalue une seule fois les modèles de `models/` sur le test (officiel et propre) et écrit les résultats dans `reports/evaluation/`
+(scores avec intervalles de confiance, F1 par classe, matrice de confusion, prédictions du modèle retenu) :
+
+```bat
+python -m src.evaluation.metrics
+```
+
 ## Notes importantes
 
 - **Terminal** : la commande d'activation dépend du terminal (cmd, PowerShell ou Git Bash, voir étape 4). Si `python` ne trouve pas un module
@@ -136,9 +148,14 @@ sont réentraînés (quelques minutes). `--force-search` relance toute la recher
 - **Recadrage dans l'application** : le modèle est entraîné sur la zone exacte du dommage (sans marge) ; l'utilisateur doit recadrer **au plus près** du dommage.
 - **Hyperparamètres** : choisis uniquement sur la validation propre (F1 macro) ; le test reste intact pour la phase 5.
   Le modèle final est ensuite réentraîné sur train + val avec ces hyperparamètres.
-- **Probabilités du SVM** : un SVM ne donne pas de probabilités ; on utilise `CalibratedClassifierCV` (calibration de Platt).
-  `SVC(probability=True)` est déprécié depuis scikit-learn 1.9.
+- **Probabilités du SVM** : on utilise `SVC(probability=True)` (méthode de libsvm), choisie sur la validation car bien mieux calibrée
+  que `CalibratedClassifierCV`, dont les confiances valaient presque toutes ≈ 0,7 (notebook 05, section 3).
+  Cette option est dépréciée depuis scikit-learn 1.9 et sera supprimée en 1.11 : **ne pas mettre à jour scikit-learn** (version figée à 1.9.1).
+- **Seuil « résultat incertain »** : confiance < 0,5 (fixé a priori). Sur le test, 91 % des régions sont au-dessus (81 % de réussite),
+  et sous le seuil la réussite n'est que de 46 %.
 - **Fichiers régénérables non versionnés** : `data/processed/` (descripteurs) et `models/` (modèles entraînés) : à régénérer avec les étapes 8 et 9.
+- **Le test a été utilisé une seule fois** (phase 5), avec des modèles déjà choisis : ses scores ne doivent pas servir à modifier le modèle.
+- **Une prédiction n'est pas une expertise d'assurance** : l'application l'affichera comme une aide indicative.
 
 ## Données utilisées
 
@@ -254,3 +271,22 @@ Entraînement sur train, choix des hyperparamètres sur la validation propre (F1
 - Le déséquilibre est géré par `class_weight="balanced"` (SVM, RF) et par le choix du F1 macro.
 - Le modèle sauvegardé (`models/svm.joblib`) contient le pipeline, le LabelEncoder et les configurations de prétraitement :
   l'API appellera `src/models/inference.py`, qui réutilise exactement le prétraitement de l'entraînement.
+
+### Évaluation finale (phase 5)
+
+Modèles choisis en phase 4, réentraînés sur train + val, évalués **une seule fois** sur le test
+(détails : `notebooks/05_evaluation.ipynb`, chiffres : `reports/evaluation/`).
+
+| Modèle | F1 macro test officiel (785) | F1 macro test propre (761) [IC 95 %] | Accuracy test propre |
+|---|---|---|---|
+| **SVM RBF (retenu)** | **0,776** | **0,774** [0,734 – 0,807] | 0,779 |
+| Random Forest | 0,701 | 0,696 [0,657 – 0,732] | 0,689 |
+| KNN | 0,659 | 0,655 [0,616 – 0,691] | 0,656 |
+| Baseline (hasard stratifié) | 0,170 | 0,171 | 0,271 |
+
+- Intervalle de confiance par bootstrap sur les **images** (les régions d'une même photo ne sont pas indépendantes).
+- Score de test proche de celui de validation (0,807) : pas de surestimation importante.
+- F1 par classe (SVM, test propre) : tire flat 0,90, glass shatter 0,82, scratch 0,80, lamp broken 0,79, dent 0,77, **crack 0,56**
+  (souvent pris pour scratch).
+- Probabilités fiables : à plus de 0,9 de confiance, 96 % de réussite.
+- Limite principale : le test utilise les bbox des annotateurs ; dans l'application, la qualité du recadrage par l'utilisateur comptera.

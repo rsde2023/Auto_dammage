@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+import warnings
 from datetime import datetime
 from pathlib import Path
 
@@ -132,7 +133,9 @@ def best_per_model(results: pd.DataFrame) -> pd.DataFrame:
 
 # ---------------------------------------------------------------- modèles finaux
 def fit_final(params: dict, X, y_enc, probability: bool = True) -> Pipeline:
-    return build_pipeline(params, probability=probability).fit(X, y_enc)
+    with warnings.catch_warnings():       # SVC(probability=True) : dépréciation connue, voir pipelines.py
+        warnings.filterwarnings("ignore", message=".*probability.*", category=FutureWarning)
+        return build_pipeline(params, probability=probability).fit(X, y_enc)
 
 
 def save_artifact(path: Path, pipeline: Pipeline, encoder: LabelEncoder, params: dict, configs: dict,

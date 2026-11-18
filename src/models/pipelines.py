@@ -8,7 +8,8 @@ et la PCA mélangerait les descripteurs en perdant leur sens.
 """
 from __future__ import annotations
 
-from sklearn.calibration import CalibratedClassifierCV
+import warnings
+
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -48,13 +49,19 @@ def make_classifier(cfg: dict, probability: bool = False):
                                     metric=cfg["metric"], n_jobs=1)
     if m == "svm":
         # class_weight="balanced" : chaque classe pèse autant (tire flat 3,6 % vs scratch 41 %).
-        svc = SVC(kernel="rbf", C=float(cfg["C"]), gamma=float(cfg["gamma"]), class_weight="balanced",
-                  random_state=SEED)
+        kwargs = dict(kernel="rbf", C=float(cfg["C"]), gamma=float(cfg["gamma"]), class_weight="balanced",
+                      random_state=SEED)
         if not probability:
-            return svc
-        # Un SVM ne donne pas de probabilités : calibration de Platt (sigmoïde) par validation croisée
-        # interne à 5 plis SUR LES DONNÉES D'ENTRAÎNEMENT ; ensemble=False -> un seul SVM entraîné sur tout.
-        return CalibratedClassifierCV(svc, method="sigmoid", cv=5, ensemble=False)
+            return SVC(**kwargs)
+        # Probabilités : méthode de libsvm (Platt sur chacun des 15 duels entre classes + couplage par paires,
+        # validation croisée interne à 5 plis sur les données d'entraînement).
+        # Comparée sur la validation (notebook 05, section 3) à CalibratedClassifierCV (sigmoïde, température) : bien mieux
+        # calibrée (log-loss 0,58 contre 0,71 ; ECE 0,03 contre 0,08). CalibratedClassifierCV calibre le score
+        # « un contre tous » du SVC, qui n'est presque qu'un nombre de votes : toutes les confiances valent ≈ 0,7.
+        # `probability` est déprécié depuis scikit-learn 1.9 (supprimé en 1.11) ; la version est figée à 1.9.1.
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", message=".*probability.*", category=FutureWarning)
+            return SVC(probability=True, **kwargs)
     if m == "rf":
         return RandomForestClassifier(n_estimators=int(cfg["n_estimators"]), max_features=cfg["max_features"],
                                       min_samples_leaf=int(cfg["min_samples_leaf"]),

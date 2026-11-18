@@ -1,0 +1,9 @@
+model,subset,n,accuracy,balanced_accuracy,macro_f1,weighted_f1,macro_f1_ci_low,macro_f1_ci_high,selected
+baseline,test,785,0.2701,0.1692,0.1695,0.272,0.1463,0.1952,False
+baseline,test_clean,761,0.2707,0.1705,0.171,0.2718,0.1472,0.196,False
+svm,test,785,0.7834,0.7507,0.7756,0.7797,0.739,0.8115,True
+svm,test_clean,761,0.7792,0.7482,0.7736,0.7755,0.7343,0.8067,True
+rf,test,785,0.6955,0.6876,0.7008,0.6932,0.663,0.7365,False
+rf,test_clean,761,0.6886,0.683,0.6963,0.6863,0.6572,0.7323,False
+knn,test,785,0.6611,0.6458,0.6589,0.6549,0.6184,0.6935,False
+knn,test_clean,761,0.6557,0.6417,0.6553,0.6491,0.6165,0.6913,False

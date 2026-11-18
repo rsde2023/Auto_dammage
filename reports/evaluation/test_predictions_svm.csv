@@ -1,0 +1,786 @@
+split,annotation_id,image_id,file_name,category_name,image_eval_keep,bbox_w,bbox_h,width,height,shooting_angle,complete_or_partial,color,bbox_rel_area,regions_in_image,tiny_bbox,true,pred,confidence,correct,test_clean
+test,1,12,000012.jpg,tire flat,True,331.72,332.82,1000,667,front,partial,white,0.16552181469265367,2,False,tire flat,tire flat,0.9879481607163818,True,True
+test,2,12,000012.jpg,tire flat,True,174.13,150.98,1000,667,front,partial,white,0.03941551334332833,2,False,tire flat,dent,0.45212462577434104,False,True
+test,3,15,000015.jpg,scratch,True,213.83,76.59,1000,667,side,partial,white,0.02455358275862069,1,False,scratch,scratch,0.9856088474818729,True,True
+test,4,23,000023.jpg,dent,True,158.81,103.79,1000,667,side,partial,white,0.02471197886056972,2,False,dent,dent,0.9556294618834054,True,True
+test,5,23,000023.jpg,scratch,True,79.79,69.42,1000,667,side,partial,white,0.008304380509745128,2,False,scratch,scratch,0.750399960458541,True,True
+test,6,33,000033.jpg,dent,True,266.92,142.21,667,1000,side,partial,green,0.05690958500749625,2,False,dent,glass shatter,0.40746627780601336,False,True
+test,7,33,000033.jpg,dent,True,356.28,478.29,667,1000,side,partial,green,0.25548000179910046,2,False,dent,scratch,0.6143771127194821,False,True
+test,8,40,000040.jpg,scratch,True,260.91,329.52,1000,667,front,partial,champagne,0.12889814572713643,2,False,scratch,scratch,0.7264983285992315,True,True
+test,9,40,000040.jpg,lamp broken,True,423.34,415.28,1000,667,front,partial,champagne,0.26357516521739127,2,False,lamp broken,lamp broken,0.9464133759245589,True,True
+test,10,42,000042.jpg,dent,True,110.6,156.54,1000,667,front,complete,blue,0.02595700749625187,12,False,dent,dent,0.6168138724033071,True,True
+test,11,42,000042.jpg,dent,True,85.08,97.56,1000,667,front,complete,blue,0.012444385007496252,12,False,dent,scratch,0.6213247224793378,False,True
+test,12,42,000042.jpg,scratch,True,353.46,48.32,1000,667,front,complete,blue,0.025605977811094454,12,False,scratch,crack,0.5666363410765806,False,True
+test,13,42,000042.jpg,scratch,True,128.46,113.3,1000,667,front,complete,blue,0.02182086656671664,12,False,scratch,glass shatter,0.8520333362455978,False,True
+test,14,42,000042.jpg,scratch,True,92.8,66.49,1000,667,front,complete,blue,0.00925078260869565,12,False,scratch,scratch,0.41606414691100835,True,True
+test,15,42,000042.jpg,scratch,True,78.8,23.95,1000,667,front,complete,blue,0.002829475262368815,12,False,scratch,crack,0.6156600202555367,False,True
+test,16,42,000042.jpg,scratch,True,314.36,134.84,1000,667,front,complete,blue,0.06355067826086956,12,False,scratch,glass shatter,0.5004653197389212,False,True
+test,17,42,000042.jpg,scratch,True,73.41,77.4,1000,667,front,complete,blue,0.00851864167916042,12,False,scratch,scratch,0.965363038123916,True,True
+test,18,42,000042.jpg,crack,True,59.07,50.38,1000,667,front,complete,blue,0.004461689055472264,12,False,crack,crack,0.4852999500703871,True,True
+test,19,42,000042.jpg,crack,True,17.7,39.32,1000,667,front,complete,blue,0.001043424287856072,12,False,crack,crack,0.8824259417739237,True,True
+test,20,42,000042.jpg,glass shatter,True,439.0,131.03,1000,667,front,complete,blue,0.08624013493253373,12,False,glass shatter,glass shatter,0.538906904969423,True,True
+test,21,42,000042.jpg,lamp broken,True,151.41,48.67,1000,667,front,complete,blue,0.011048162968515742,12,False,lamp broken,lamp broken,0.9527954373951779,True,True
+test,22,44,000044.jpg,dent,True,153.27,158.76,1000,667,side,partial,blue,0.036481477061469265,4,False,dent,scratch,0.5735584231845018,False,True
+test,23,44,000044.jpg,scratch,True,294.42,90.95,1000,667,side,partial,blue,0.04014617541229386,4,False,scratch,scratch,0.9296535315003093,True,True
+test,24,44,000044.jpg,crack,True,56.39,181.55,1000,667,side,partial,blue,0.015348732383808098,4,False,crack,scratch,0.8218446855268134,False,True
+test,25,44,000044.jpg,crack,True,132.9,32.65,1000,667,side,partial,blue,0.006505524737631185,4,False,crack,scratch,0.8387624059194309,False,True
+test,26,57,000057.jpg,tire flat,True,619.35,560.49,1000,658,side,partial,,0.5275676010638298,1,False,tire flat,tire flat,0.9999999791826201,True,True
+test,27,82,000082.jpg,scratch,True,565.66,423.36,1000,667,rear,partial,silver,0.35903720779610193,2,False,scratch,scratch,0.7428226318788058,True,True
+test,28,82,000082.jpg,lamp broken,True,445.88,95.3,1000,667,rear,partial,silver,0.06370669265367317,2,False,lamp broken,lamp broken,0.9904478165871778,True,True
+test,29,88,000088.jpg,crack,True,127.03,340.73,1000,750,rear,partial,silver,0.05771057586666667,1,False,crack,scratch,0.9369141536276099,False,True
+test,30,90,000090.jpg,glass shatter,True,770.6,415.09,1000,735,side,partial,,0.4351950394557823,1,False,glass shatter,glass shatter,0.7319177805582419,True,True
+test,31,106,000106.jpg,lamp broken,True,421.38,207.66,1000,667,front,partial,black,0.13119006116941528,1,False,lamp broken,lamp broken,0.9575475273511954,True,True
+test,32,128,000128.jpg,dent,True,155.61,215.14,667,1000,rear,partial,black,0.0501918071964018,4,False,dent,lamp broken,0.8512680590718754,False,True
+test,33,128,000128.jpg,dent,True,215.13,153.07,667,1000,rear,partial,black,0.04937023853073463,4,False,dent,dent,0.8262242213842631,True,True
+test,34,128,000128.jpg,dent,True,110.78,204.34,667,1000,rear,partial,black,0.03393820869565218,4,False,dent,tire flat,0.42954064343716203,False,True
+test,35,128,000128.jpg,crack,True,188.96,254.26,667,1000,rear,partial,black,0.07203143868065967,4,False,crack,crack,0.4847477375504859,True,True
+test,36,152,000152.jpg,dent,True,212.94,129.69,1000,666,side,partial,silver,0.041465748648648645,3,False,dent,dent,0.8797756956248616,True,True
+test,37,152,000152.jpg,dent,True,168.2,76.45,1000,666,side,partial,silver,0.01930764264264264,3,False,dent,scratch,0.8789142915439463,False,True
+test,38,152,000152.jpg,lamp broken,True,125.15,116.81,1000,666,side,partial,silver,0.02195010735735736,3,False,lamp broken,lamp broken,0.6810606826826151,True,True
+test,39,165,000165.jpg,glass shatter,True,966.58,609.29,1000,692,front,partial,,0.8510513413294797,1,False,glass shatter,glass shatter,0.8817115520620642,True,True
+test,40,175,000175.jpg,glass shatter,True,783.86,664.5,1000,667,side,partial,blue,0.7809219940029986,1,False,glass shatter,glass shatter,0.994691651621029,True,True
+test,41,185,000185.jpg,glass shatter,True,665.17,539.36,1000,667,,partial,blue,0.5378801967016491,1,False,glass shatter,glass shatter,0.9577166463438076,True,True
+test,42,191,000191.jpg,dent,True,102.55,56.88,665,1000,front,complete,silver,0.008771494736842106,5,False,dent,dent,0.951329044767209,True,True
+test,43,191,000191.jpg,dent,True,174.91,244.05,665,1000,front,complete,silver,0.06419065488721805,5,False,dent,dent,0.81772797802495,True,True
+test,44,191,000191.jpg,dent,True,108.0,102.04,665,1000,front,complete,silver,0.01657190977443609,5,False,dent,dent,0.8330905140733478,True,True
+test,45,191,000191.jpg,crack,True,31.33,130.01,665,1000,front,complete,silver,0.006125132781954886,5,False,crack,crack,0.9133345649774227,True,True
+test,46,191,000191.jpg,lamp broken,True,325.95,184.67,665,1000,front,complete,silver,0.09051606992481202,5,False,lamp broken,lamp broken,0.9512072526088031,True,True
+test,47,204,000204.jpg,glass shatter,True,618.85,387.69,1000,667,side,partial,blue,0.3597030832083958,1,False,glass shatter,dent,0.6302658718908964,False,True
+test,48,214,000214.jpg,glass shatter,True,1000.0,667.0,1000,667,front,partial,,1.0,1,False,glass shatter,lamp broken,0.5730853081544979,False,True
+test,49,224,000224.jpg,scratch,True,631.76,149.72,1000,667,front,partial,black,0.14180975592203898,2,False,scratch,crack,0.7396440738084995,False,True
+test,50,224,000224.jpg,glass shatter,True,1000.0,333.67,1000,667,front,partial,black,0.5002548725637181,2,False,glass shatter,glass shatter,0.9357984934825193,True,True
+test,51,233,000233.jpg,glass shatter,True,672.63,396.55,1000,707,front,partial,silver,0.37727217326732676,1,False,glass shatter,lamp broken,0.6081184228288508,False,True
+test,52,237,000237.jpg,dent,True,180.19,321.55,1000,665,side,partial,red,0.08712796165413533,4,False,dent,dent,0.785858855450869,True,True
+test,53,237,000237.jpg,dent,True,419.61,313.09,1000,665,side,partial,red,0.19755743593984962,4,False,dent,dent,0.8087124700342506,True,True
+test,54,237,000237.jpg,dent,True,202.09,148.33,1000,665,side,partial,red,0.04507670631578948,4,False,dent,dent,0.7891395508044734,True,True
+test,55,237,000237.jpg,tire flat,True,359.69,300.77,1000,665,side,partial,red,0.16268264857142856,4,False,tire flat,tire flat,0.9999999998818334,True,True
+test,56,253,000253.jpg,glass shatter,True,982.93,478.33,1000,667,side,partial,green,0.7048949128935531,1,False,glass shatter,glass shatter,0.999667847814248,True,True
+test,57,267,000267.jpg,glass shatter,True,941.88,417.69,1000,671,side,partial,green,0.5863097722801788,1,False,glass shatter,lamp broken,0.4640533179344327,False,True
+test,58,288,000288.jpg,glass shatter,True,653.85,392.68,1000,750,side,partial,gray,0.342338424,1,False,glass shatter,dent,0.5430574339328028,False,True
+test,59,293,000293.jpg,scratch,True,220.12,284.76,1000,667,rear,partial,silver,0.09397506926536732,2,False,scratch,scratch,0.9236336441369906,True,True
+test,60,293,000293.jpg,lamp broken,True,493.92,275.89,1000,667,rear,partial,silver,0.2042992335832084,2,False,lamp broken,lamp broken,0.9469831999164733,True,True
+test,61,297,000297.jpg,lamp broken,True,535.09,667.0,1000,667,,partial,,0.5350900000000001,1,False,lamp broken,lamp broken,0.981830860592268,True,True
+test,62,310,000310.jpg,glass shatter,True,997.3,562.0,1000,562,front,partial,silver,0.9973,1,False,glass shatter,glass shatter,0.9999718466716834,True,True
+test,63,320,000320.jpg,glass shatter,True,951.16,552.14,1000,672,front,partial,gray,0.7815081583333333,1,False,glass shatter,glass shatter,0.5554836192367592,True,True
+test,64,330,000330.jpg,glass shatter,True,1000.0,595.81,1000,667,front,partial,,0.8932683658170915,1,False,glass shatter,glass shatter,0.7890835562028459,True,True
+test,65,340,000340.jpg,glass shatter,True,902.86,568.8,1000,667,front,partial,pink,0.7699351844077961,1,False,glass shatter,glass shatter,0.5607691152833473,True,True
+test,66,348,000348.jpg,dent,True,62.39,215.52,1000,667,,partial,silver,0.02015935952023988,4,False,dent,dent,0.963507170671327,True,True
+test,67,348,000348.jpg,dent,True,125.91,76.0,1000,667,,partial,silver,0.014346566716641678,4,False,dent,dent,0.8087377027370679,True,True
+test,68,348,000348.jpg,dent,True,257.61,197.21,1000,667,,partial,silver,0.0761668187406297,4,False,dent,scratch,0.7022795918609508,False,True
+test,69,348,000348.jpg,scratch,True,170.75,122.82,1000,667,,partial,silver,0.03144155172413793,4,False,scratch,dent,0.7611402028854923,False,True
+test,70,353,000353.jpg,tire flat,True,503.57,454.59,1000,647,side,partial,yellow,0.3538143528593508,1,False,tire flat,tire flat,0.9987846571711082,True,True
+test,71,387,000387.jpg,lamp broken,True,677.48,339.29,1000,750,front,partial,silver,0.30648291893333335,1,False,lamp broken,lamp broken,0.9944469123324605,True,True
+test,72,400,000400.jpg,scratch,True,289.43,153.62,1000,667,rear,complete,silver,0.06666002488755622,2,False,scratch,scratch,0.8134729435618279,True,True
+test,73,400,000400.jpg,crack,True,14.96,59.81,1000,667,rear,complete,silver,0.001341465667166417,2,True,crack,crack,0.6697029164479044,True,True
+test,74,404,000404.jpg,dent,True,650.53,276.58,1000,667,front,partial,red,0.26975050584707644,3,False,dent,dent,0.8727796647023084,True,True
+test,75,404,000404.jpg,lamp broken,True,72.31,201.35,1000,667,front,partial,red,0.021828513493253373,3,False,lamp broken,dent,0.8138885940837874,False,True
+test,76,404,000404.jpg,lamp broken,True,254.75,143.51,1000,667,front,partial,red,0.05481135307346327,3,False,lamp broken,lamp broken,0.6435610855429357,True,True
+test,77,415,000415.jpg,dent,True,744.95,505.1,1000,750,side,partial,silver,0.5016989933333335,2,False,dent,dent,0.7713586704049182,True,True
+test,78,415,000415.jpg,scratch,True,325.74,146.1,1000,750,side,partial,silver,0.063454152,2,False,scratch,scratch,0.9648922447241998,True,True
+test,79,422,000422.jpg,dent,True,677.99,454.31,1000,667,,partial,silver,0.4617955575712144,2,False,dent,lamp broken,0.44843391777540564,False,True
+test,80,422,000422.jpg,scratch,True,97.33,88.99,1000,667,,partial,silver,0.012985602248875561,2,False,scratch,scratch,0.9115048223731602,True,True
+test,81,424,000424.jpg,scratch,True,529.36,667.0,1000,667,side,partial,white,0.5293599999999999,1,False,scratch,scratch,0.8207984484160543,True,True
+test,82,433,000433.jpg,dent,True,748.68,81.67,1000,667,front,partial,red,0.09167120779610195,2,False,dent,dent,0.6681180057728174,True,True
+test,83,433,000433.jpg,glass shatter,True,1000.0,554.55,1000,667,front,partial,red,0.8314092953523239,2,False,glass shatter,glass shatter,0.9994967110533581,True,True
+test,84,452,000452.jpg,dent,True,446.95,624.34,1000,662,side,partial,red,0.4215238111782478,1,False,dent,dent,0.8323683036468401,True,True
+test,85,466,000466.jpg,glass shatter,True,984.9,401.23,1000,668,front,partial,red,0.5915739925149701,1,False,glass shatter,glass shatter,0.9980866507772598,True,True
+test,86,468,000468.jpg,dent,True,191.7,184.34,1000,667,rear,partial,silver,0.05298047676161918,3,False,dent,dent,0.8995064773806256,True,True
+test,87,468,000468.jpg,dent,True,85.65,48.21,1000,667,rear,partial,silver,0.006190684407796103,3,False,dent,dent,0.8949571902488906,True,True
+test,88,468,000468.jpg,scratch,True,206.07,220.12,1000,667,rear,partial,silver,0.06800618950524738,3,False,scratch,scratch,0.8347193386132232,True,True
+test,89,481,000481.jpg,scratch,True,139.56,94.6,1000,667,,partial,gray,0.01979366716641679,2,False,scratch,scratch,0.8934889931225619,True,True
+test,90,481,000481.jpg,scratch,True,327.84,150.8,1000,667,,partial,gray,0.07412034782608695,2,False,scratch,scratch,0.8523604697109892,True,True
+test,91,488,000488.jpg,scratch,True,148.08,283.49,1000,704,,partial,gray,0.05962954431818182,1,False,scratch,scratch,0.9793810473022727,True,True
+test,92,513,000513.jpg,dent,True,143.29,140.29,1000,667,front,complete,blue,0.03013816206896551,7,False,dent,dent,0.9637634323011137,True,True
+test,93,513,000513.jpg,scratch,True,223.3,175.66,1000,667,front,complete,blue,0.058807913043478266,7,False,scratch,scratch,0.45140272637860945,True,True
+test,94,513,000513.jpg,scratch,True,449.55,150.33,1000,667,front,complete,blue,0.10132061694152925,7,False,scratch,glass shatter,0.9271786213156145,False,True
+test,95,513,000513.jpg,crack,True,78.08,79.61,1000,667,front,complete,blue,0.009319263568215892,7,False,crack,dent,0.4802706384015071,False,True
+test,96,513,000513.jpg,crack,True,46.0,76.3,1000,667,front,complete,blue,0.005262068965517241,7,False,crack,crack,0.91302454860975,True,True
+test,97,513,000513.jpg,glass shatter,True,382.02,80.25,1000,667,front,complete,blue,0.04596267616191904,7,False,glass shatter,glass shatter,0.9375564432250797,True,True
+test,98,513,000513.jpg,lamp broken,True,186.89,57.85,1000,667,front,complete,blue,0.01620927511244378,7,False,lamp broken,lamp broken,0.8564130284020686,True,True
+test,99,514,000514.jpg,scratch,True,663.54,364.9,1000,750,front,partial,silver,0.322834328,3,False,scratch,scratch,0.4575254736654169,True,True
+test,100,514,000514.jpg,crack,True,172.74,169.13,1000,750,front,partial,silver,0.0389540216,3,False,crack,scratch,0.6646679680908731,False,True
+test,101,514,000514.jpg,crack,True,244.76,234.09,1000,750,front,partial,silver,0.0763944912,3,False,crack,dent,0.9929755005980875,False,True
+test,102,520,000520.jpg,dent,True,93.72,97.14,1000,668,front,partial,white,0.01362868383233533,4,False,dent,dent,0.7201337036499026,True,True
+test,103,520,000520.jpg,dent,True,130.88,167.0,1000,668,front,partial,white,0.03272,4,False,dent,dent,0.9761265869639348,True,True
+test,104,520,000520.jpg,dent,True,297.64,218.13,1000,668,front,partial,white,0.09719193592814371,4,False,dent,dent,0.9422687139127204,True,True
+test,105,520,000520.jpg,crack,True,33.15,77.41,1000,668,front,partial,white,0.003841529191616766,4,False,crack,crack,0.8382377586660692,True,True
+test,106,541,000541.jpg,scratch,True,355.59,379.45,1000,750,rear,partial,black,0.17990483399999999,3,False,scratch,scratch,0.9845982118400746,True,True
+test,107,541,000541.jpg,scratch,True,174.48,281.58,1000,750,rear,partial,black,0.0655067712,3,False,scratch,scratch,0.8631670828958816,True,True
+test,108,541,000541.jpg,lamp broken,True,361.54,336.88,1000,750,rear,partial,black,0.16239412693333335,3,False,lamp broken,lamp broken,0.96987578743051,True,True
+test,109,550,000550.jpg,crack,True,121.37,346.16,668,1000,side,partial,orange,0.06289437005988024,3,False,crack,crack,0.86846912280104,True,True
+test,110,550,000550.jpg,crack,True,146.32,120.36,668,1000,side,partial,orange,0.02636388502994012,3,False,crack,scratch,0.43571914607140544,False,True
+test,111,550,000550.jpg,crack,True,46.14,60.12,668,1000,side,partial,orange,0.0041526,3,False,crack,crack,0.9716786667717036,True,True
+test,112,565,000565.jpg,glass shatter,True,959.52,650.75,1000,706,front,partial,,0.8844300849858358,1,False,glass shatter,glass shatter,0.9980825014287898,True,True
+test,113,567,000567.jpg,scratch,True,201.64,124.32,563,1000,side,partial,gray,0.044525550266429834,2,False,scratch,scratch,0.9795437043596561,True,True
+test,114,567,000567.jpg,scratch,True,187.19,125.76,563,1000,side,partial,gray,0.04181352468916519,2,False,scratch,scratch,0.6614354057441255,True,True
+test,115,570,000570.jpg,dent,True,229.79,479.89,667,1000,rear,partial,green,0.16532822053973015,3,False,dent,dent,0.7383987940031068,True,True
+test,116,570,000570.jpg,dent,True,75.6,163.17,667,1000,rear,partial,green,0.01849423088455772,3,False,dent,dent,0.7635276217370304,True,True
+test,117,570,000570.jpg,crack,True,236.62,167.79,667,1000,rear,partial,green,0.05952394272863568,3,False,crack,scratch,0.53494299397124,False,True
+test,118,589,000589.jpg,tire flat,True,285.61,410.51,1000,667,side,partial,red,0.17578075127436282,1,False,tire flat,tire flat,0.990360263659089,True,True
+test,119,603,000603.jpg,tire flat,True,510.46,459.18,1000,667,side,partial,gray,0.35141382728635684,1,False,tire flat,tire flat,0.9999998617164685,True,True
+test,120,611,000611.jpg,dent,True,179.23,365.26,1000,667,rear,partial,silver,0.09814925007496252,2,False,dent,scratch,0.6743650095136963,False,True
+test,121,611,000611.jpg,lamp broken,True,580.14,280.97,1000,667,rear,partial,silver,0.24438071334332834,2,False,lamp broken,scratch,0.7409965915600442,False,True
+test,122,625,000625.jpg,dent,True,765.36,509.12,1000,668,side,partial,gray,0.5833234778443114,3,False,dent,dent,0.5438377186969887,True,True
+test,123,625,000625.jpg,dent,True,197.18,118.53,1000,668,side,partial,gray,0.03498764281437126,3,False,dent,scratch,0.9775988302634974,False,True
+test,124,625,000625.jpg,scratch,True,114.86,126.72,1000,668,side,partial,gray,0.021789010778443113,3,False,scratch,scratch,0.9748594316192799,True,True
+test,125,638,000638.jpg,scratch,True,734.04,667.0,1000,667,side,partial,gray,0.73404,1,False,scratch,scratch,0.8230589688187081,True,True
+test,126,648,000648.jpg,scratch,True,770.45,383.0,1000,750,side,partial,champagne,0.39344313333333336,1,False,scratch,scratch,0.5378680519864195,True,True
+test,127,659,000659.jpg,tire flat,True,423.18,393.43,1000,751,side,partial,white,0.2216933520639148,1,False,tire flat,tire flat,0.9999999978333621,True,True
+test,128,670,000670.jpg,tire flat,True,346.04,310.77,1000,667,side,partial,gray,0.16122766236881558,1,False,tire flat,tire flat,0.9999999999732582,True,True
+test,129,687,000687.jpg,scratch,True,510.25,315.27,1000,750,front,partial,blue,0.21448868999999998,1,False,scratch,scratch,0.5894381166708782,True,True
+test,130,693,000693.jpg,glass shatter,True,583.25,673.95,667,1000,side,partial,yellow,0.5893273425787107,1,False,glass shatter,dent,0.5337193307455693,False,True
+test,131,696,000696.jpg,dent,True,51.59,86.12,1000,664,rear,partial,green,0.006691160843373494,2,False,dent,dent,0.6432202010891491,True,True
+test,132,696,000696.jpg,lamp broken,True,303.7,453.87,1000,664,rear,partial,green,0.20759084186746987,2,False,lamp broken,lamp broken,0.9311227542210679,True,True
+test,133,698,000698.jpg,scratch,True,232.58,185.92,1000,666,rear,partial,gray,0.06492683723723723,3,False,scratch,dent,0.5800839314206229,False,True
+test,134,698,000698.jpg,scratch,True,536.23,262.49,1000,666,rear,partial,gray,0.21134386291291293,3,False,scratch,glass shatter,0.5479403164176437,False,True
+test,135,698,000698.jpg,lamp broken,True,446.09,229.16,1000,666,rear,partial,gray,0.15349246906906905,3,False,lamp broken,lamp broken,0.9805504316379972,True,True
+test,136,702,000702.jpg,dent,True,683.45,366.96,1000,667,side,partial,gray,0.37601021289355324,2,False,dent,dent,0.9756236200106998,True,True
+test,137,702,000702.jpg,lamp broken,True,673.95,242.32,1000,667,side,partial,gray,0.2448449235382309,2,False,lamp broken,dent,0.3412750906607768,False,True
+test,138,720,000720.jpg,tire flat,True,410.12,601.6,1000,667,side,partial,,0.36990733433283357,1,False,tire flat,glass shatter,0.4265885860005822,False,True
+test,139,730,000730.jpg,tire flat,True,311.72,477.63,1000,667,side,partial,,0.22321862608695653,1,False,tire flat,tire flat,0.9999979708862599,True,True
+test,140,740,000740.jpg,tire flat,True,447.46,545.51,1000,750,side,partial,,0.32545853946666664,1,False,tire flat,tire flat,0.9999983369523805,True,True
+test,141,749,000749.jpg,tire flat,True,376.24,632.62,1000,667,side,partial,,0.35684699970014994,1,False,tire flat,scratch,0.3979844134012599,False,True
+test,142,766,000766.jpg,scratch,True,724.16,563.0,1000,563,side,partial,gray,0.7241599999999999,3,False,scratch,scratch,0.6934185090342592,True,True
+test,143,766,000766.jpg,scratch,True,246.99,121.79,1000,563,side,partial,gray,0.0534296840142096,3,False,scratch,scratch,0.9043254734102661,True,True
+test,144,766,000766.jpg,scratch,True,285.1,75.44,1000,563,side,partial,gray,0.03820238721136767,3,False,scratch,scratch,0.7751876869305914,True,True
+test,145,778,000778.jpg,tire flat,False,538.34,902.57,667,1000,side,partial,black,0.7284700656671664,1,False,tire flat,tire flat,0.9999994227962531,True,False
+test,146,787,000787.jpg,glass shatter,True,491.43,282.03,1000,667,rear,partial,gray,0.20779310779610194,1,False,glass shatter,glass shatter,0.8804346322496265,True,True
+test,147,796,000796.jpg,scratch,True,174.33,274.07,1000,667,,partial,champagne,0.07163211859070466,2,False,scratch,scratch,0.8548291829676454,True,True
+test,148,796,000796.jpg,scratch,True,185.6,98.87,1000,667,,partial,champagne,0.027511652173913045,2,False,scratch,scratch,0.9597775332400825,True,True
+test,149,809,000809.jpg,scratch,True,872.35,593.88,1000,667,,partial,silver,0.776718467766117,2,False,scratch,dent,0.6904646284671627,False,True
+test,150,809,000809.jpg,scratch,True,182.72,127.34,1000,667,,partial,silver,0.034883905247376314,2,False,scratch,scratch,0.8624840034382785,True,True
+test,151,811,000811.jpg,dent,True,237.28,151.09,1000,667,front,partial,silver,0.053749078260869575,3,False,dent,dent,0.9634608965059629,True,True
+test,152,811,000811.jpg,crack,True,44.24,42.44,1000,667,front,partial,silver,0.002814910944527736,3,False,crack,scratch,0.8609940786281244,False,True
+test,153,811,000811.jpg,crack,True,15.98,34.45,1000,667,front,partial,silver,0.0008253538230884559,3,True,crack,crack,0.9227024956124629,True,True
+test,154,822,000822.jpg,tire flat,True,586.69,567.82,1000,1000,side,partial,,0.3331343158,1,False,tire flat,tire flat,0.999999973320647,True,True
+test,155,831,000831.jpg,glass shatter,True,442.45,220.38,667,1000,front,partial,yellow,0.14618760269865066,1,False,glass shatter,glass shatter,0.9996362459563415,True,True
+test,156,834,000834.jpg,scratch,True,851.43,237.38,1000,665,,partial,yellow,0.30392850135338345,2,False,scratch,scratch,0.7859890951845014,True,True
+test,157,834,000834.jpg,scratch,True,69.68,24.89,1000,665,,partial,yellow,0.0026080228571428573,2,False,scratch,scratch,0.7784804108389055,True,True
+test,158,848,000848.jpg,dent,True,173.13,62.01,747,1000,side,partial,champagne,0.014371875903614457,4,False,dent,dent,0.8695256220056544,True,True
+test,159,848,000848.jpg,dent,True,159.34,192.08,747,1000,side,partial,champagne,0.04097192396251674,4,False,dent,dent,0.6539905220456793,True,True
+test,160,848,000848.jpg,dent,True,189.49,194.66,747,1000,side,partial,champagne,0.049379013922356094,4,False,dent,dent,0.7016601071311477,True,True
+test,161,848,000848.jpg,scratch,True,417.68,70.82,747,1000,side,partial,champagne,0.039598524230254346,4,False,scratch,scratch,0.9094684293771262,True,True
+test,162,856,000856.jpg,scratch,True,287.66,117.08,1000,667,,partial,black,0.05049360239880061,2,False,scratch,scratch,0.7451143006624544,True,True
+test,163,856,000856.jpg,crack,True,620.45,37.43,1000,667,,partial,black,0.03481775637181409,2,False,crack,scratch,0.6719183940137698,False,True
+test,164,869,000869.jpg,tire flat,True,512.92,459.14,1000,667,side,partial,blue,0.35307659490254867,1,False,tire flat,tire flat,0.999999995054578,True,True
+test,165,875,000875.jpg,dent,True,656.0,617.5,1000,668,side,partial,white,0.6064071856287425,2,False,dent,dent,0.9613585307628355,True,True
+test,166,875,000875.jpg,dent,True,269.75,341.19,1000,668,side,partial,white,0.13777844685628743,2,False,dent,dent,0.4693797889870029,True,True
+test,167,883,000883.jpg,dent,True,708.85,436.7,1000,668,side,partial,silver,0.4634053817365269,2,False,dent,dent,0.9119683011802043,True,True
+test,168,883,000883.jpg,lamp broken,True,147.1,194.68,1000,668,side,partial,silver,0.04287040119760479,2,False,lamp broken,dent,0.5102621020219426,False,True
+test,169,886,000886.jpg,crack,True,97.3,177.99,1000,605,,partial,black,0.02862549917355372,1,False,crack,dent,0.5067265125258622,False,True
+test,170,889,000889.jpg,glass shatter,True,940.62,567.23,1000,667,side,partial,,0.7999218629685158,1,False,glass shatter,dent,0.39376087221457473,False,True
+test,171,905,000905.jpg,dent,True,489.59,643.41,1000,667,,partial,silver,0.47227451559220385,1,False,dent,dent,0.6407568894042988,True,True
+test,172,909,000909.jpg,dent,True,103.65,149.27,1000,664,side,partial,silver,0.023300957078313256,4,False,dent,scratch,0.6915430710294295,False,True
+test,173,909,000909.jpg,scratch,True,272.43,223.57,1000,664,side,partial,silver,0.09172767334337349,4,False,scratch,scratch,0.9248686614873359,True,True
+test,174,909,000909.jpg,scratch,True,321.53,317.58,1000,664,side,partial,silver,0.15378237560240962,4,False,scratch,dent,0.5807862761392911,False,True
+test,175,909,000909.jpg,scratch,True,334.71,221.67,1000,664,side,partial,silver,0.11173970737951806,4,False,scratch,scratch,0.8927793091851514,True,True
+test,176,914,000914.jpg,glass shatter,True,848.2,578.62,1000,667,front,partial,white,0.7358103208395803,1,False,glass shatter,glass shatter,0.708646756616491,True,True
+test,177,926,000926.jpg,dent,True,100.72,95.65,1000,563,front,complete,silver,0.017111666074600355,4,False,dent,dent,0.8539743068327299,True,True
+test,178,926,000926.jpg,dent,True,180.37,96.5,1000,563,front,complete,silver,0.0309159946714032,4,False,dent,dent,0.7117033100216453,True,True
+test,179,926,000926.jpg,lamp broken,True,123.48,51.17,1000,563,front,complete,silver,0.011222862522202488,4,False,lamp broken,dent,0.2964895800018637,False,True
+test,180,926,000926.jpg,lamp broken,True,91.41,59.87,1000,563,front,complete,silver,0.009720633570159858,4,False,lamp broken,dent,0.6110179457536795,False,True
+test,181,950,000950.jpg,scratch,True,290.87,70.25,1000,668,side,partial,gray,0.030589247754491018,2,False,scratch,scratch,0.8431657728692824,True,True
+test,182,950,000950.jpg,lamp broken,True,302.58,272.55,1000,668,side,partial,gray,0.12345535778443115,2,False,lamp broken,glass shatter,0.5391350997224532,False,True
+test,183,965,000965.jpg,dent,True,123.52,85.03,1000,667,side,partial,silver,0.01574648515742129,4,False,dent,dent,0.9169795898174647,True,True
+test,184,965,000965.jpg,dent,True,379.93,350.81,1000,667,side,partial,silver,0.1998249524737631,4,False,dent,dent,0.7752565812947955,True,True
+test,185,965,000965.jpg,scratch,True,169.85,126.43,1000,667,side,partial,silver,0.03219510569715142,4,False,scratch,dent,0.7885471169400007,False,True
+test,186,965,000965.jpg,glass shatter,True,273.19,254.49,1000,667,side,partial,silver,0.1042340676161919,4,False,glass shatter,crack,0.3817194286626402,False,True
+test,187,969,000969.jpg,tire flat,True,664.15,568.84,1000,667,side,partial,yellow,0.5664094242878561,1,False,tire flat,tire flat,0.9999998140232794,True,True
+test,188,988,000988.jpg,dent,True,223.16,204.7,1000,667,front,partial,black,0.06848703448275861,2,False,dent,scratch,0.6123123173467878,False,True
+test,189,988,000988.jpg,scratch,True,182.23,244.14,1000,667,front,partial,black,0.06670109775112443,2,False,scratch,scratch,0.6348077301897896,True,True
+test,190,996,000996.jpg,scratch,True,392.37,103.03,1000,735,side,partial,red,0.0550011987755102,2,False,scratch,scratch,0.8346004932299755,True,True
+test,191,996,000996.jpg,scratch,True,212.32,68.69,1000,735,side,partial,red,0.01984253170068027,2,False,scratch,scratch,0.9335792879044322,True,True
+test,192,1016,001016.jpg,tire flat,True,681.02,481.25,1000,682,side,partial,,0.4805584677419355,1,False,tire flat,tire flat,0.9827030933311748,True,True
+test,193,1024,001024.jpg,tire flat,True,415.96,563.65,1000,667,side,partial,,0.35150802698650674,1,False,tire flat,tire flat,0.5355975478997991,True,True
+test,194,1039,001039.jpg,crack,True,56.97,40.39,721,1000,rear,partial,silver,0.003191426213592233,2,False,crack,crack,0.5842402210826828,True,True
+test,195,1039,001039.jpg,lamp broken,True,390.47,378.23,721,1000,rear,partial,silver,0.20483698765603334,2,False,lamp broken,lamp broken,0.9856616128847734,True,True
+test,196,1040,001040.jpg,dent,True,351.02,348.15,1000,667,rear,partial,silver,0.18321980959520237,2,False,dent,scratch,0.6752707556663423,False,True
+test,197,1040,001040.jpg,dent,True,271.7,526.82,1000,667,rear,partial,silver,0.214598191904048,2,False,dent,scratch,0.7369242811979361,False,True
+test,198,1043,001043.jpg,scratch,True,367.62,404.94,1000,750,side,partial,white,0.1984853904,2,False,scratch,scratch,0.9272955200670676,True,True
+test,199,1043,001043.jpg,scratch,True,251.05,249.01,1000,750,side,partial,white,0.08335194733333333,2,False,scratch,scratch,0.7923581136789384,True,True
+test,200,1058,001058.jpg,tire flat,True,458.32,501.33,1000,662,side,partial,gray,0.34708393595166165,1,False,tire flat,tire flat,0.9977893998309142,True,True
+test,201,1071,001071.jpg,scratch,True,337.53,109.14,1000,652,side,partial,gray,0.056500037116564414,2,False,scratch,scratch,0.4271261425032675,True,True
+test,202,1071,001071.jpg,tire flat,True,394.61,484.79,1000,652,side,partial,gray,0.2934094814417178,2,False,tire flat,tire flat,0.9933543095604424,True,True
+test,203,1078,001078.jpg,tire flat,True,540.22,572.09,1000,667,side,partial,,0.4633500146926537,1,False,tire flat,tire flat,0.8847915923058448,True,True
+test,204,1088,001088.jpg,tire flat,True,544.36,489.76,1000,667,side,partial,white,0.399708776011994,1,False,tire flat,tire flat,0.9999997651059074,True,True
+test,205,1098,001098.jpg,tire flat,True,504.64,455.83,1000,667,side,partial,white,0.3448726404797601,1,False,tire flat,tire flat,0.9999999985515396,True,True
+test,206,1118,001118.jpg,glass shatter,True,874.74,668.0,1000,668,front,partial,gray,0.87474,1,False,glass shatter,dent,0.7544205690145452,False,True
+test,207,1122,001122.jpg,scratch,True,217.7,117.09,667,1000,front,partial,blue,0.038216631184407795,3,False,scratch,scratch,0.9260400607669345,True,True
+test,208,1122,001122.jpg,scratch,True,143.97,166.52,667,1000,front,partial,blue,0.035942855172413794,3,False,scratch,scratch,0.9747285411317844,True,True
+test,209,1122,001122.jpg,scratch,True,126.62,131.83,667,1000,front,partial,blue,0.025025958920539732,3,False,scratch,scratch,0.9106862217881443,True,True
+test,210,1130,001130.jpg,scratch,True,282.74,299.22,1000,750,side,partial,black,0.11280195040000002,1,False,scratch,scratch,0.4378011882071194,True,True
+test,211,1163,001163.jpg,tire flat,True,617.15,526.98,1000,667,side,partial,gray,0.4875947631184408,1,False,tire flat,tire flat,0.9999999531428814,True,True
+test,212,1168,001168.jpg,dent,True,302.58,260.37,1000,750,side,partial,champagne,0.1050436728,3,False,dent,dent,0.44618866817288494,True,True
+test,213,1168,001168.jpg,scratch,True,137.38,72.86,1000,750,side,partial,champagne,0.013346009066666666,3,False,scratch,scratch,0.8013306118460721,True,True
+test,214,1168,001168.jpg,scratch,True,548.47,344.69,1000,750,side,partial,champagne,0.25206949906666665,3,False,scratch,scratch,0.9663613327327326,True,True
+test,215,1169,001169.jpg,dent,True,233.15,209.19,1000,667,front,partial,silver,0.0731224115442279,4,False,dent,dent,0.8706493865538415,True,True
+test,216,1169,001169.jpg,dent,True,369.95,258.61,1000,667,front,partial,silver,0.14343743553223387,4,False,dent,dent,0.43185371983352283,True,True
+test,217,1169,001169.jpg,dent,True,207.19,268.6,1000,667,front,partial,silver,0.08343513343328336,4,False,dent,dent,0.7099985221768664,True,True
+test,218,1169,001169.jpg,scratch,True,122.81,163.75,1000,667,front,partial,silver,0.030150131184407798,4,False,scratch,scratch,0.6968083269718297,True,True
+test,219,1180,001180.jpg,scratch,True,391.41,40.44,1000,667,side,partial,silver,0.023731065067466268,1,False,scratch,scratch,0.9931523148672743,True,True
+test,220,1196,001196.jpg,tire flat,True,759.44,583.67,1000,751,side,partial,,0.5902294870838882,1,False,tire flat,tire flat,0.9957569254961819,True,True
+test,221,1236,001236.jpg,dent,True,183.32,227.18,1000,667,rear,partial,silver,0.06243873703148426,4,False,dent,dent,0.9197321306634041,True,True
+test,222,1236,001236.jpg,dent,True,152.77,208.19,1000,667,rear,partial,silver,0.047683937481259375,4,False,dent,dent,0.9656808517315276,True,True
+test,223,1236,001236.jpg,scratch,True,166.53,135.3,1000,667,rear,partial,silver,0.03378037331334333,4,False,scratch,scratch,0.9900640660940915,True,True
+test,224,1236,001236.jpg,tire flat,True,232.3,331.58,1000,667,rear,partial,silver,0.11548131034482759,4,False,tire flat,tire flat,0.5254554156737453,True,True
+test,225,1240,001240.jpg,dent,True,282.68,322.32,1000,662,,partial,silver,0.13763356132930513,2,False,dent,dent,0.6164105154458351,True,True
+test,226,1240,001240.jpg,dent,True,250.45,197.06,1000,662,,partial,silver,0.07455238217522658,2,False,dent,dent,0.66028374076647,True,True
+test,227,1256,001256.jpg,scratch,True,429.32,47.66,1000,667,front,partial,red,0.030676748425787104,2,False,scratch,scratch,0.7574159162088322,True,True
+test,228,1256,001256.jpg,scratch,True,582.64,296.61,1000,667,front,partial,red,0.25909572773613193,2,False,scratch,dent,0.5249772647636158,False,True
+test,229,1259,001259.jpg,dent,True,367.25,487.23,684,1000,side,partial,red,0.2616011951754386,2,False,dent,scratch,0.6205779265124042,False,True
+test,230,1259,001259.jpg,dent,True,288.6,200.46,684,1000,side,partial,red,0.08458005263157896,2,False,dent,lamp broken,0.6923234249054092,False,True
+test,231,1263,001263.jpg,scratch,True,375.75,452.85,667,1000,,partial,red,0.25511002623688156,1,False,scratch,scratch,0.7203033281450996,True,True
+test,232,1267,001267.jpg,glass shatter,True,1000.0,508.26,1000,667,rear,partial,,0.7620089955022489,1,False,glass shatter,glass shatter,0.9999399241443496,True,True
+test,233,1268,001268.jpg,dent,True,161.03,70.91,1000,667,side,partial,gray,0.017119396251874062,2,False,dent,dent,0.710410466156572,True,True
+test,234,1268,001268.jpg,crack,True,36.64,112.08,1000,667,side,partial,gray,0.006156838380809595,2,False,crack,scratch,0.8160569294647029,False,True
+test,235,1272,001272.jpg,dent,True,307.28,395.92,1000,667,side,partial,silver,0.18239624827586207,1,False,dent,dent,0.8540101609369096,True,True
+test,236,1282,001282.jpg,scratch,True,207.11,194.63,1000,667,front,partial,silver,0.060434511694152926,1,False,scratch,scratch,0.922755714571988,True,True
+test,237,1307,001307.jpg,scratch,True,357.5,143.8,1000,667,side,partial,red,0.07707421289355323,3,False,scratch,scratch,0.9503248090027916,True,True
+test,238,1307,001307.jpg,scratch,True,351.94,100.1,1000,667,side,partial,red,0.05281738230884557,3,False,scratch,scratch,0.9398590455622764,True,True
+test,239,1307,001307.jpg,scratch,True,505.99,328.16,1000,667,side,partial,red,0.2489440455772114,3,False,scratch,scratch,0.9601177610503272,True,True
+test,240,1314,001314.jpg,dent,True,208.95,162.81,1000,645,front,partial,black,0.052742867441860464,5,False,dent,dent,0.8435785779030308,True,True
+test,241,1314,001314.jpg,scratch,True,135.63,44.8,1000,645,front,partial,black,0.009420502325581394,5,False,scratch,scratch,0.6458214856123584,True,True
+test,242,1314,001314.jpg,scratch,True,77.78,53.41,1000,645,front,partial,black,0.006440666356589147,5,False,scratch,scratch,0.7951733918224891,True,True
+test,243,1314,001314.jpg,scratch,True,408.05,181.99,1000,645,front,partial,black,0.11513336356589149,5,False,scratch,scratch,0.9731626500686182,True,True
+test,244,1314,001314.jpg,lamp broken,True,574.49,260.8,1000,645,front,partial,black,0.23228991007751937,5,False,lamp broken,lamp broken,0.8884369351307095,True,True
+test,245,1327,001327.jpg,scratch,True,182.72,55.62,1000,667,side,partial,green,0.01523671124437781,2,False,scratch,scratch,0.9980043891226096,True,True
+test,246,1327,001327.jpg,scratch,True,283.61,107.25,1000,667,side,partial,green,0.04560295727136432,2,False,scratch,scratch,0.49812683104161876,True,True
+test,247,1358,001358.jpg,dent,True,147.83,124.13,1000,666,front,partial,silver,0.027552759609609612,4,False,dent,dent,0.8142890603467557,True,True
+test,248,1358,001358.jpg,scratch,True,234.52,281.23,1000,666,front,partial,silver,0.09903011951951952,4,False,scratch,dent,0.5405683548164462,False,True
+test,249,1358,001358.jpg,scratch,True,269.19,167.99,1000,666,front,partial,silver,0.0678997418918919,4,False,scratch,dent,0.9091032599380122,False,True
+test,250,1358,001358.jpg,crack,True,138.25,140.64,1000,666,front,partial,silver,0.029194414414414414,4,False,crack,dent,0.5470998383628425,False,True
+test,251,1367,001367.jpg,scratch,True,54.02,62.77,1000,667,,partial,white,0.005083711244377812,2,False,scratch,scratch,0.5104040564108244,True,True
+test,252,1367,001367.jpg,scratch,True,83.42,162.86,1000,667,,partial,white,0.020368487556221893,2,False,scratch,scratch,0.7095443070517452,True,True
+test,253,1368,001368.jpg,lamp broken,True,744.48,267.94,1000,667,front,partial,black,0.29906442458770616,1,False,lamp broken,lamp broken,0.9957075715971748,True,True
+test,254,1372,001372.jpg,dent,True,308.01,409.95,1000,667,side,partial,silver,0.18930839505247374,1,False,dent,dent,0.9543088673233743,True,True
+test,255,1394,001394.jpg,scratch,True,181.17,285.41,1000,667,rear,partial,gray,0.07752283313343329,2,False,scratch,glass shatter,0.8961738665716592,False,True
+test,256,1394,001394.jpg,lamp broken,True,869.65,371.48,1000,667,rear,partial,gray,0.4843442008995502,2,False,lamp broken,lamp broken,0.9030618698631818,True,True
+test,257,1396,001396.jpg,crack,True,276.19,205.42,1000,667,rear,partial,black,0.08505989475262368,2,False,crack,scratch,0.787122258665223,False,True
+test,258,1396,001396.jpg,lamp broken,True,179.23,211.68,1000,667,rear,partial,black,0.05688066926536731,2,False,lamp broken,lamp broken,0.9837059821815158,True,True
+test,259,1402,001402.jpg,dent,True,171.92,139.53,1000,750,rear,partial,white,0.0319839968,6,False,dent,dent,0.7165713197698591,True,True
+test,260,1402,001402.jpg,dent,True,268.27,185.22,1000,750,rear,partial,white,0.06625195919999999,6,False,dent,dent,0.812930545639957,True,True
+test,261,1402,001402.jpg,scratch,True,278.44,33.12,1000,750,rear,partial,white,0.012295910399999999,6,False,scratch,scratch,0.9569352536346714,True,True
+test,262,1402,001402.jpg,crack,True,439.03,151.13,1000,750,rear,partial,white,0.08846747186666665,6,False,crack,crack,0.46393721226283746,True,True
+test,263,1402,001402.jpg,crack,True,173.47,52.1,1000,750,rear,partial,white,0.012050382666666666,6,False,crack,scratch,0.9687845112416291,False,True
+test,264,1402,001402.jpg,crack,True,67.56,17.17,1000,750,rear,partial,white,0.0015466736000000001,6,False,crack,scratch,0.8483534995381362,False,True
+test,265,1409,001409.jpg,tire flat,True,571.82,520.19,1000,750,side,partial,silver,0.39660672773333344,1,False,tire flat,tire flat,0.9999999558145947,True,True
+test,266,1424,001424.jpg,dent,True,487.51,384.83,1000,667,,partial,silver,0.28127207391304343,1,False,dent,dent,0.9823650207714206,True,True
+test,267,1437,001437.jpg,dent,True,471.79,508.72,1000,667,side,partial,white,0.3598335964017991,5,False,dent,dent,0.8246639182242816,True,True
+test,268,1437,001437.jpg,scratch,True,242.31,36.61,1000,667,side,partial,white,0.013299803748125937,5,False,scratch,scratch,0.6567825741365222,True,True
+test,269,1437,001437.jpg,scratch,True,475.87,199.4,1000,667,side,partial,white,0.14226158620689655,5,False,scratch,crack,0.4817796450921483,False,True
+test,270,1437,001437.jpg,scratch,True,232.21,144.58,1000,667,side,partial,white,0.050334215592203906,5,False,scratch,scratch,0.7275736766144288,True,True
+test,271,1437,001437.jpg,scratch,True,247.55,111.29,1000,667,side,partial,white,0.041304107196401804,5,False,scratch,scratch,0.8129599884034704,True,True
+test,272,1459,001459.jpg,glass shatter,True,358.76,95.57,1000,751,front,complete,blue,0.04565471797603195,3,False,glass shatter,glass shatter,0.9995573254914268,True,True
+test,273,1459,001459.jpg,lamp broken,True,113.24,52.13,1000,751,front,complete,blue,0.00786045432756325,3,False,lamp broken,lamp broken,0.8511761714457582,True,True
+test,274,1459,001459.jpg,lamp broken,True,113.19,50.07,1000,751,front,complete,blue,0.0075465023968042605,3,False,lamp broken,lamp broken,0.9846438087726631,True,True
+test,275,1483,001483.jpg,dent,True,176.73,88.37,1000,667,side,partial,black,0.023414737781109446,3,False,dent,scratch,0.6828745995111997,False,True
+test,276,1483,001483.jpg,dent,True,295.06,156.26,1000,667,side,partial,black,0.06912455112443777,3,False,dent,scratch,0.8981686724201613,False,True
+test,277,1483,001483.jpg,dent,True,255.62,122.82,1000,667,side,partial,black,0.04706933793103448,3,False,dent,dent,0.7763088653610544,True,True
+test,278,1488,001488.jpg,dent,True,222.16,122.86,1000,667,side,partial,silver,0.04092140569715143,2,False,dent,dent,0.9459503824812203,True,True
+test,279,1488,001488.jpg,scratch,True,205.98,184.94,1000,667,side,partial,silver,0.05711235562218891,2,False,scratch,scratch,0.9272255741024548,True,True
+test,280,1493,001493.jpg,dent,True,241.11,169.95,1000,667,rear,complete,silver,0.06143424962518741,4,False,dent,dent,0.8348516409675528,True,True
+test,281,1493,001493.jpg,scratch,True,267.89,97.24,1000,667,rear,complete,silver,0.039054907946026986,4,False,scratch,dent,0.8198513261744979,False,True
+test,282,1493,001493.jpg,lamp broken,True,185.99,118.72,1000,667,rear,complete,silver,0.033104546926536735,4,False,lamp broken,dent,0.6747817967387996,False,True
+test,283,1493,001493.jpg,tire flat,True,113.17,226.35,1000,667,rear,complete,silver,0.038404841829085455,4,False,tire flat,glass shatter,0.5506059427295952,False,True
+test,284,1502,001502.jpg,dent,True,273.55,162.48,1000,670,rear,partial,silver,0.06633791641791045,4,False,dent,dent,0.7465952470276163,True,True
+test,285,1502,001502.jpg,dent,True,308.01,428.85,1000,670,rear,partial,silver,0.19714938582089553,4,False,dent,dent,0.9606278042071497,True,True
+test,286,1502,001502.jpg,scratch,True,84.97,89.31,1000,670,rear,partial,silver,0.011326374179104478,4,False,scratch,scratch,0.8625443797371668,True,True
+test,287,1502,001502.jpg,scratch,True,171.6,74.36,1000,670,rear,partial,silver,0.01904503880597015,4,False,scratch,scratch,0.9963374971828864,True,True
+test,288,1506,001506.jpg,scratch,True,313.64,296.48,1000,667,side,partial,black,0.13941227466266867,3,False,scratch,scratch,0.6257133914971231,True,True
+test,289,1506,001506.jpg,scratch,True,122.97,186.85,1000,667,side,partial,black,0.03444819265367316,3,False,scratch,dent,0.38747944120405275,False,True
+test,290,1506,001506.jpg,scratch,True,233.57,225.94,1000,667,side,partial,black,0.0791196488755622,3,False,scratch,scratch,0.374559321579645,True,True
+test,291,1517,001517.jpg,dent,True,138.42,217.37,1000,668,side,partial,silver,0.04504244820359281,1,False,dent,dent,0.6328454143339458,True,True
+test,292,1524,001524.jpg,dent,True,144.57,118.42,1000,668,side,partial,white,0.025628711676646706,1,False,dent,dent,0.9966804117171791,True,True
+test,293,1536,001536.jpg,dent,True,158.65,346.46,1000,594,rear,partial,silver,0.09253514983164983,4,False,dent,dent,0.9564053940572702,True,True
+test,294,1536,001536.jpg,dent,True,155.91,81.28,1000,594,rear,partial,silver,0.021333947474747473,4,False,dent,dent,0.9523798505586437,True,True
+test,295,1536,001536.jpg,scratch,True,369.89,229.01,1000,594,rear,partial,silver,0.14260691734006734,4,False,scratch,scratch,0.9115692559133832,True,True
+test,296,1536,001536.jpg,crack,True,68.48,117.25,1000,594,rear,partial,silver,0.013517306397306398,4,False,crack,crack,0.7962748320244988,True,True
+test,297,1558,001558.jpg,dent,True,641.21,527.24,1000,750,rear,partial,silver,0.45076208053333333,1,False,dent,dent,0.9802468487160093,True,True
+test,298,1562,001562.jpg,dent,True,297.42,430.5,1000,667,rear,partial,white,0.1919629835082459,2,False,dent,dent,0.7013555397387021,True,True
+test,299,1562,001562.jpg,crack,True,143.79,86.37,1000,667,rear,partial,white,0.018619403748125936,2,False,crack,crack,0.6031319728511318,True,True
+test,300,1582,001582.jpg,dent,True,457.32,412.39,1000,667,,partial,mixture,0.2827499172413793,1,False,dent,scratch,0.505293500906139,False,True
+test,301,1587,001587.jpg,scratch,True,578.63,460.31,1000,667,front,partial,black,0.3993241008995502,1,False,scratch,dent,0.5209875002988372,False,True
+test,302,1594,001594.jpg,scratch,True,689.84,266.8,1000,664,,partial,black,0.2771826987951807,1,False,scratch,scratch,0.5974423088960287,True,True
+test,303,1610,001610.jpg,dent,True,413.74,254.12,1000,667,side,partial,gray,0.15763059790104947,2,False,dent,dent,0.9199229956098808,True,True
+test,304,1610,001610.jpg,dent,True,575.76,329.72,1000,667,side,partial,gray,0.28461707226386807,2,False,dent,scratch,0.4852736482035958,False,True
+test,305,1617,001617.jpg,dent,True,469.59,147.85,1000,667,front,partial,blue,0.10409127661169414,4,False,dent,dent,0.5242867995956907,True,True
+test,306,1617,001617.jpg,scratch,True,305.12,110.59,1000,667,front,partial,blue,0.05058953643178411,4,False,scratch,scratch,0.8807065503474818,True,True
+test,307,1617,001617.jpg,scratch,True,535.77,195.43,1000,667,front,partial,blue,0.15697980674662668,4,False,scratch,scratch,0.7605181990770291,True,True
+test,308,1617,001617.jpg,lamp broken,True,543.27,227.55,1000,667,front,partial,blue,0.18533896326836583,4,False,lamp broken,lamp broken,0.9811607954362978,True,True
+test,309,1627,001627.jpg,scratch,True,151.61,163.53,1000,664,,partial,blue,0.037338529066265065,2,False,scratch,scratch,0.9331122497525656,True,True
+test,310,1627,001627.jpg,crack,True,95.58,214.23,1000,664,,partial,blue,0.030837505120481928,2,False,crack,scratch,0.4582662747636026,False,True
+test,311,1633,001633.jpg,dent,True,371.3,611.55,1000,667,side,partial,gray,0.34043255622188906,3,False,dent,dent,0.6723831285783829,True,True
+test,312,1633,001633.jpg,dent,True,109.63,335.18,1000,667,side,partial,gray,0.05509112953523238,3,False,dent,dent,0.5932054342206966,True,True
+test,313,1633,001633.jpg,scratch,True,311.24,202.45,1000,667,side,partial,gray,0.09446857271364317,3,False,scratch,scratch,0.8971743802100716,True,True
+test,314,1637,001637.jpg,scratch,True,436.68,247.36,1000,667,side,partial,red,0.16194477481259373,1,False,scratch,scratch,0.6741278338081187,True,True
+test,315,1641,001641.jpg,dent,True,170.95,134.82,1000,667,rear,partial,silver,0.034553941529235375,1,False,dent,dent,0.9275696982088,True,True
+test,316,1660,001660.jpg,glass shatter,True,1000.0,593.75,1000,750,front,partial,gray,0.7916666666666666,1,False,glass shatter,glass shatter,0.635031430331522,True,True
+test,317,1665,001665.jpg,dent,True,132.71,163.88,1000,750,front,partial,champagne,0.028998019733333335,4,False,dent,dent,0.5373250427666614,True,True
+test,318,1665,001665.jpg,scratch,True,641.91,137.44,1000,750,front,partial,champagne,0.11763214719999998,4,False,scratch,crack,0.41758875531635326,False,True
+test,319,1665,001665.jpg,scratch,True,500.5,170.0,1000,750,front,partial,champagne,0.11344666666666667,4,False,scratch,scratch,0.8738655227809174,True,True
+test,320,1665,001665.jpg,lamp broken,True,882.66,386.1,1000,750,front,partial,champagne,0.454393368,4,False,lamp broken,lamp broken,0.991498449001332,True,True
+test,321,1671,001671.jpg,dent,True,304.41,219.11,1000,664,side,partial,blue,0.10045071551204822,3,False,dent,dent,0.9167443117817998,True,True
+test,322,1671,001671.jpg,dent,True,423.81,376.32,1000,664,side,partial,blue,0.2401930409638554,3,False,dent,dent,0.6313422581986876,True,True
+test,323,1671,001671.jpg,lamp broken,True,392.21,438.75,1000,664,side,partial,blue,0.2591598456325301,3,False,lamp broken,dent,0.4914151216884925,False,True
+test,324,1701,001701.jpg,dent,True,98.35,136.8,1000,667,side,partial,white,0.020171334332833583,2,False,dent,scratch,0.7129239454268176,False,True
+test,325,1701,001701.jpg,dent,True,316.53,199.2,1000,667,side,partial,white,0.0945318980509745,2,False,dent,dent,0.47157602507353563,True,True
+test,326,1709,001709.jpg,scratch,True,468.06,453.5,1000,667,rear,partial,white,0.3182386956521739,1,False,scratch,scratch,0.8305682122071163,True,True
+test,327,1720,001720.jpg,scratch,True,374.36,427.94,1000,656,side,partial,gray,0.24421283292682927,2,False,scratch,scratch,0.7878878139980866,True,True
+test,328,1720,001720.jpg,scratch,True,99.3,389.54,1000,656,side,partial,gray,0.05896542987804878,2,False,scratch,scratch,0.5582380406187714,True,True
+test,329,1746,001746.jpg,scratch,True,383.68,102.81,1000,708,side,partial,white,0.05571488813559322,3,False,scratch,scratch,0.6934125442691903,True,True
+test,330,1746,001746.jpg,scratch,True,532.06,196.08,1000,708,side,partial,white,0.14735356610169492,3,False,scratch,scratch,0.6648885724648878,True,True
+test,331,1746,001746.jpg,scratch,True,94.86,144.15,1000,708,side,partial,white,0.019313656779661018,3,False,scratch,dent,0.6802997934772101,False,True
+test,332,1751,001751.jpg,scratch,True,474.29,176.73,1000,667,,partial,white,0.12566907301349325,1,False,scratch,scratch,0.8733336121154787,True,True
+test,333,1768,001768.jpg,scratch,True,669.71,354.32,1000,667,,partial,blue,0.3557595910044978,1,False,scratch,scratch,0.9560177914936383,True,True
+test,334,1799,001799.jpg,dent,True,369.94,410.88,1000,667,side,partial,blue,0.22788747706146925,6,False,dent,dent,0.9070910035534545,True,True
+test,335,1799,001799.jpg,dent,True,35.29,71.41,1000,667,side,partial,blue,0.0037781992503748128,6,False,dent,dent,0.9721487155311829,True,True
+test,336,1799,001799.jpg,scratch,True,23.89,158.06,1000,667,side,partial,blue,0.0056612494752623695,6,False,scratch,scratch,0.5186867250700086,True,True
+test,337,1799,001799.jpg,scratch,True,483.82,253.83,1000,667,side,partial,blue,0.18411998590704648,6,False,scratch,scratch,0.8160208432638768,True,True
+test,338,1799,001799.jpg,scratch,True,549.18,535.29,1000,667,side,partial,blue,0.44073547556221876,6,False,scratch,dent,0.7472414408671658,False,True
+test,339,1799,001799.jpg,scratch,True,178.73,217.7,1000,667,side,partial,blue,0.058335113943028476,6,False,scratch,dent,0.46318602449265384,False,True
+test,340,1800,001800.jpg,scratch,True,294.06,586.62,1000,667,side,partial,blue,0.2586229043478261,3,False,scratch,dent,0.7702087230697124,False,True
+test,341,1800,001800.jpg,scratch,True,65.5,348.48,1000,667,side,partial,blue,0.034221049475262375,3,False,scratch,scratch,0.7710395194975588,True,True
+test,342,1800,001800.jpg,scratch,True,369.41,170.01,1000,667,side,partial,blue,0.09415801214392804,3,False,scratch,scratch,0.8262470212359845,True,True
+test,343,1809,001809.jpg,dent,True,430.73,206.87,1000,750,side,partial,silver,0.11880682013333335,2,False,dent,dent,0.8544836275280258,True,True
+test,344,1809,001809.jpg,scratch,True,416.29,347.17,1000,750,side,partial,silver,0.19269786573333336,2,False,scratch,dent,0.562111103675545,False,True
+test,345,1820,001820.jpg,dent,True,591.83,178.69,1000,665,side,partial,gray,0.15902872586466166,4,False,dent,dent,0.9017791448803496,True,True
+test,346,1820,001820.jpg,scratch,True,319.55,57.24,1000,665,side,partial,gray,0.027505326315789475,4,False,scratch,scratch,0.8163297339554783,True,True
+test,347,1820,001820.jpg,scratch,True,110.5,41.31,1000,665,side,partial,gray,0.006864293233082707,4,False,scratch,scratch,0.8306700669441068,True,True
+test,348,1820,001820.jpg,scratch,True,711.29,128.42,1000,665,side,partial,gray,0.1373591906766917,4,False,scratch,scratch,0.7723798168878502,True,True
+test,349,1832,001832.jpg,dent,True,575.9,202.61,1000,662,side,partial,gray,0.1762584577039275,1,False,dent,dent,0.5823901322513946,True,True
+test,350,1837,001837.jpg,dent,True,906.93,320.29,1000,664,side,partial,white,0.4374707977409639,2,False,dent,dent,0.8946698563550947,True,True
+test,351,1837,001837.jpg,scratch,True,228.8,36.55,1000,664,side,partial,white,0.01259433734939759,2,False,scratch,scratch,0.9931110068220347,True,True
+test,352,1843,001843.jpg,dent,False,267.43,145.74,1000,749,front,partial,silver,0.05203637943925234,2,False,dent,crack,0.42514194039742376,False,False
+test,353,1843,001843.jpg,dent,False,312.24,277.34,1000,749,front,partial,silver,0.11561634392523362,2,False,dent,dent,0.9621699156993455,True,False
+test,354,1874,001874.jpg,dent,True,341.14,432.36,1000,750,rear,partial,silver,0.1966603872,4,False,dent,crack,0.4155986197290583,False,True
+test,355,1874,001874.jpg,scratch,True,566.28,225.61,1000,750,rear,partial,silver,0.1703445744,4,False,scratch,scratch,0.6605306273199173,True,True
+test,356,1874,001874.jpg,crack,True,84.29,167.59,1000,750,rear,partial,silver,0.01883488146666667,4,False,crack,scratch,0.7825986549763603,False,True
+test,357,1874,001874.jpg,lamp broken,True,553.25,519.14,1000,750,rear,partial,silver,0.38295227333333337,4,False,lamp broken,lamp broken,0.48432995562198106,True,True
+test,358,1879,001879.jpg,scratch,True,208.31,56.87,1000,750,side,partial,silver,0.015795452933333332,4,False,scratch,scratch,0.9968070170444735,True,True
+test,359,1879,001879.jpg,scratch,True,113.45,163.02,1000,750,side,partial,silver,0.024659492,4,False,scratch,scratch,0.9630925389234513,True,True
+test,360,1879,001879.jpg,scratch,True,507.84,208.12,1000,750,side,partial,silver,0.1409222144,4,False,scratch,scratch,0.884912727809806,True,True
+test,361,1879,001879.jpg,scratch,True,191.61,90.81,1000,750,side,partial,silver,0.0232001388,4,False,scratch,scratch,0.9835968343555258,True,True
+test,362,1885,001885.jpg,dent,True,184.81,251.17,1000,667,side,partial,black,0.06959329490254872,2,False,dent,dent,0.8303962144982087,True,True
+test,363,1885,001885.jpg,tire flat,True,477.61,484.29,1000,667,side,partial,black,0.34677923073463274,2,False,tire flat,tire flat,0.9976962756301234,True,True
+test,364,1899,001899.jpg,dent,True,409.27,416.83,1000,667,side,partial,white,0.2557661380809595,3,False,dent,dent,0.7708913243471764,True,True
+test,365,1899,001899.jpg,dent,True,196.57,432.96,1000,667,side,partial,white,0.1275966224887556,3,False,dent,dent,0.9642142378959648,True,True
+test,366,1899,001899.jpg,dent,True,180.44,213.21,1000,667,side,partial,white,0.05767857931034483,3,False,dent,dent,0.7357458113397344,True,True
+test,367,1900,001900.jpg,crack,True,510.51,531.17,1000,667,front,partial,white,0.4065481209895052,2,False,crack,dent,0.7958219547045479,False,True
+test,368,1900,001900.jpg,lamp broken,True,478.75,335.39,1000,667,front,partial,white,0.2407315779610195,2,False,lamp broken,scratch,0.6796355310393896,False,True
+test,369,1910,001910.jpg,scratch,True,240.24,310.84,1000,667,front,partial,white,0.11195832323838081,2,False,scratch,scratch,0.812422393704213,True,True
+test,370,1910,001910.jpg,scratch,True,77.21,30.5,1000,667,front,partial,white,0.0035305922038980507,2,False,scratch,scratch,0.5922102849020664,True,True
+test,371,1917,001917.jpg,dent,True,552.33,92.4,1000,667,rear,partial,silver,0.07651468065967018,2,False,dent,scratch,0.7069255653396893,False,True
+test,372,1917,001917.jpg,lamp broken,True,236.61,445.87,1000,667,rear,partial,silver,0.15816686761619192,2,False,lamp broken,scratch,0.5176512430609838,False,True
+test,373,1926,001926.jpg,scratch,True,74.35,240.24,1000,667,,partial,black,0.02677937631184408,2,False,scratch,scratch,0.9122200363085695,True,True
+test,374,1926,001926.jpg,scratch,True,479.23,236.37,1000,667,,partial,black,0.1698284784107946,2,False,scratch,scratch,0.6857067819551044,True,True
+test,375,1939,001939.jpg,dent,True,353.97,486.28,1000,667,side,partial,silver,0.2580637655172414,1,False,dent,dent,0.7119835330774511,True,True
+test,376,1944,001944.jpg,dent,True,408.89,173.74,1000,667,side,partial,red,0.10650756911544228,1,False,dent,dent,0.9246652867830002,True,True
+test,377,1962,001962.jpg,lamp broken,True,282.39,306.16,1000,787,front,partial,white,0.10985580991105463,1,False,lamp broken,lamp broken,0.8859314830110404,True,True
+test,378,1963,001963.jpg,dent,True,173.34,338.68,1000,617,side,partial,silver,0.09514877017828201,2,False,dent,scratch,0.8242417013774227,False,True
+test,379,1963,001963.jpg,scratch,True,416.63,582.3,1000,617,side,partial,silver,0.3931987828200972,2,False,scratch,dent,0.911050883874645,False,True
+test,380,1967,001967.jpg,dent,True,276.38,211.27,1000,667,side,partial,silver,0.08754243268365818,2,False,dent,scratch,0.7575579170416823,False,True
+test,381,1967,001967.jpg,scratch,True,323.76,78.93,1000,667,side,partial,silver,0.03831240899550225,2,False,scratch,scratch,0.9393960548478474,True,True
+test,382,1979,001979.jpg,scratch,True,78.37,85.55,1000,667,front,partial,gray,0.010051804347826087,6,False,scratch,scratch,0.8956140438389507,True,True
+test,383,1979,001979.jpg,scratch,True,290.58,126.98,1000,667,front,partial,gray,0.055319113043478266,6,False,scratch,scratch,0.8736006863698773,True,True
+test,384,1979,001979.jpg,scratch,True,81.69,148.4,1000,667,front,partial,gray,0.018175106446776612,6,False,scratch,scratch,0.8235683723712687,True,True
+test,385,1979,001979.jpg,crack,True,178.7,37.61,1000,667,front,partial,gray,0.010076322338830584,6,False,crack,scratch,0.5908747754674248,False,True
+test,386,1979,001979.jpg,crack,True,128.88,52.47,1000,667,front,partial,gray,0.010138431184407796,6,False,crack,crack,0.6682662513312757,True,True
+test,387,1979,001979.jpg,crack,True,462.54,157.51,1000,667,front,partial,gray,0.10922739940029984,6,False,crack,crack,0.6162448479168385,True,True
+test,388,1993,001993.jpg,dent,True,357.02,357.02,1000,667,front,partial,silver,0.1910993709145427,1,False,dent,dent,0.9580159169367792,True,True
+test,389,2006,002006.jpg,dent,False,151.18,260.29,1000,1000,front,partial,silver,0.0393506422,4,False,dent,scratch,0.652285145592822,False,False
+test,390,2006,002006.jpg,dent,False,212.85,186.4,1000,1000,front,partial,silver,0.03967524,4,False,dent,dent,0.9461907507986994,True,False
+test,391,2006,002006.jpg,scratch,False,213.53,179.07,1000,1000,front,partial,silver,0.0382368171,4,False,scratch,scratch,0.9678318822284335,True,False
+test,392,2006,002006.jpg,scratch,False,274.08,215.23,1000,1000,front,partial,silver,0.05899023839999999,4,False,scratch,scratch,0.9063042990528751,True,False
+test,393,2014,002014.jpg,scratch,True,766.38,567.29,1000,667,rear,partial,silver,0.6518136584707646,1,False,scratch,scratch,0.8608355592302944,True,True
+test,394,2035,002035.jpg,dent,True,480.04,337.22,1000,691,side,partial,orange,0.23426785643994216,3,False,dent,dent,0.9913544588075136,True,True
+test,395,2035,002035.jpg,dent,True,335.51,238.6,1000,691,side,partial,orange,0.11585048625180898,3,False,dent,dent,0.972824248190515,True,True
+test,396,2035,002035.jpg,lamp broken,True,206.2,378.04,1000,691,side,partial,orange,0.1128101997105644,3,False,lamp broken,scratch,0.7440582565217425,False,True
+test,397,2045,002045.jpg,scratch,True,223.16,229.56,1000,750,side,partial,white,0.06830481279999999,3,False,scratch,scratch,0.8366638170580527,True,True
+test,398,2045,002045.jpg,scratch,True,309.88,94.53,1000,750,side,partial,white,0.0390572752,3,False,scratch,scratch,0.8725833426483977,True,True
+test,399,2045,002045.jpg,scratch,True,152.1,246.63,1000,750,side,partial,white,0.05001656399999999,3,False,scratch,scratch,0.9006102614497078,True,True
+test,400,2056,002056.jpg,dent,True,253.34,241.44,1000,667,rear,partial,silver,0.09170376251874063,2,False,dent,dent,0.8570410444118991,True,True
+test,401,2056,002056.jpg,dent,True,50.1,63.77,1000,667,rear,partial,silver,0.004789920539730135,2,False,dent,dent,0.8757992230279041,True,True
+test,402,2062,002062.jpg,dent,True,97.0,67.5,1000,668,side,partial,mixture,0.009801646706586826,4,False,dent,dent,0.98590706028458,True,True
+test,403,2062,002062.jpg,scratch,True,292.82,46.19,1000,668,side,partial,mixture,0.02024753862275449,4,False,scratch,scratch,0.9659979469146704,True,True
+test,404,2062,002062.jpg,scratch,True,197.58,72.47,1000,668,side,partial,mixture,0.02143506377245509,4,False,scratch,scratch,0.9827199594123732,True,True
+test,405,2062,002062.jpg,scratch,True,317.7,55.44,1000,668,side,partial,mixture,0.02636719760479042,4,False,scratch,scratch,0.9890334119120098,True,True
+test,406,2072,002072.jpg,dent,True,573.05,235.58,1000,664,side,partial,white,0.20331192620481928,3,False,dent,dent,0.8834276724794886,True,True
+test,407,2072,002072.jpg,dent,True,413.53,294.73,1000,664,side,partial,white,0.18355376039156626,3,False,dent,dent,0.973774485389749,True,True
+test,408,2072,002072.jpg,scratch,True,202.78,256.95,1000,664,side,partial,white,0.07847036295180722,3,False,scratch,crack,0.6260697526280825,False,True
+test,409,2090,002090.jpg,scratch,True,78.26,63.71,1000,667,,partial,gray,0.007475179310344829,3,False,scratch,crack,0.5176027723627994,False,True
+test,410,2090,002090.jpg,scratch,True,198.7,51.92,1000,667,,partial,gray,0.015467022488755621,3,False,scratch,scratch,0.5219021322280033,True,True
+test,411,2090,002090.jpg,scratch,True,136.3,99.85,1000,667,,partial,gray,0.02040413043478261,3,False,scratch,dent,0.7186363933782018,False,True
+test,412,2125,002125.jpg,dent,True,584.13,281.28,1000,667,side,partial,black,0.24633296311844075,6,False,dent,dent,0.9317692367545585,True,True
+test,413,2125,002125.jpg,scratch,True,216.6,192.79,1000,667,side,partial,black,0.06260616791604198,6,False,scratch,scratch,0.7734104449730659,True,True
+test,414,2125,002125.jpg,scratch,True,611.14,181.7,1000,667,side,partial,black,0.16648296551724137,6,False,scratch,scratch,0.8634251346160359,True,True
+test,415,2125,002125.jpg,scratch,True,349.68,103.2,1000,667,side,partial,black,0.05410341229385308,6,False,scratch,scratch,0.6226598417524385,True,True
+test,416,2125,002125.jpg,scratch,True,129.63,75.91,1000,667,side,partial,black,0.01475294347826087,6,False,scratch,scratch,0.8828988436770299,True,True
+test,417,2125,002125.jpg,scratch,True,324.1,135.61,1000,667,side,partial,black,0.06589385457271366,6,False,scratch,scratch,0.5628069035419797,True,True
+test,418,2138,002138.jpg,scratch,True,138.66,78.03,1000,750,front,partial,gray,0.014426186399999999,1,False,scratch,scratch,0.6013601325298182,True,True
+test,419,2140,002140.jpg,dent,True,345.24,195.06,1000,750,side,partial,gray,0.0897900192,1,False,dent,dent,0.930896681172118,True,True
+test,420,2151,002151.jpg,dent,True,167.75,175.69,750,1000,rear,complete,silver,0.039295996666666666,3,False,dent,dent,0.8732538061350932,True,True
+test,421,2151,002151.jpg,scratch,True,106.0,173.52,750,1000,rear,complete,silver,0.024524160000000003,3,False,scratch,scratch,0.8445111271005135,True,True
+test,422,2151,002151.jpg,lamp broken,True,192.45,331.51,750,1000,rear,complete,silver,0.08506546599999999,3,False,lamp broken,lamp broken,0.9949931441775863,True,True
+test,423,2163,002163.jpg,dent,True,73.47,141.12,1000,668,side,partial,blue,0.015521087425149701,2,False,dent,scratch,0.44906966136591575,False,True
+test,424,2163,002163.jpg,dent,True,158.69,313.42,1000,668,side,partial,blue,0.07445601766467067,2,False,dent,dent,0.5222078056419911,True,True
+test,425,2169,002169.jpg,scratch,True,289.67,238.78,646,1000,rear,partial,red,0.10707028266253871,3,False,scratch,scratch,0.9753123873854952,True,True
+test,426,2169,002169.jpg,scratch,True,465.6,158.43,646,1000,rear,partial,red,0.11418731888544892,3,False,scratch,scratch,0.7372699075753961,True,True
+test,427,2169,002169.jpg,crack,True,258.77,216.53,646,1000,rear,partial,red,0.08673601873065015,3,False,crack,dent,0.5809740806931097,False,True
+test,428,2189,002189.jpg,dent,True,126.84,120.72,1000,667,side,partial,white,0.02295670884557721,4,False,dent,scratch,0.6142487285696071,False,True
+test,429,2189,002189.jpg,scratch,True,128.96,47.08,1000,667,side,partial,white,0.009102603898050975,4,False,scratch,scratch,0.9178184930216992,True,True
+test,430,2189,002189.jpg,scratch,True,172.7,228.23,1000,667,side,partial,white,0.05909343478260869,4,False,scratch,scratch,0.986580737955423,True,True
+test,431,2189,002189.jpg,scratch,True,129.78,123.55,1000,667,side,partial,white,0.024039458770614693,4,False,scratch,scratch,0.797841195044472,True,True
+test,432,2194,002194.jpg,scratch,True,813.64,165.8,1000,668,,partial,blue,0.20194837125748505,1,False,scratch,scratch,0.7283768832762556,True,True
+test,433,2213,002213.jpg,scratch,True,191.39,197.88,1000,750,front,partial,white,0.050496337599999996,4,False,scratch,scratch,0.5473157075158137,True,True
+test,434,2213,002213.jpg,crack,True,67.62,27.3,1000,750,front,partial,white,0.0024613680000000002,4,False,crack,scratch,0.5503865658401371,False,True
+test,435,2213,002213.jpg,crack,True,74.45,198.34,1000,750,front,partial,white,0.01968855066666667,4,False,crack,crack,0.6668224567125498,True,True
+test,436,2213,002213.jpg,lamp broken,True,721.5,272.97,1000,750,front,partial,white,0.26259714,4,False,lamp broken,lamp broken,0.9954597014706233,True,True
+test,437,2235,002235.jpg,dent,True,257.02,382.91,1000,751,side,partial,white,0.13104597629826897,5,False,dent,scratch,0.6093870227766465,False,True
+test,438,2235,002235.jpg,dent,True,267.01,394.05,1000,751,side,partial,white,0.1401002536617843,5,False,dent,scratch,0.5055439073052316,False,True
+test,439,2235,002235.jpg,scratch,True,248.2,175.34,1000,751,side,partial,white,0.057948585885486015,5,False,scratch,scratch,0.9877081064519032,True,True
+test,440,2235,002235.jpg,scratch,True,613.59,138.5,1000,751,side,partial,white,0.11315874167776299,5,False,scratch,scratch,0.7058643146327056,True,True
+test,441,2235,002235.jpg,scratch,True,267.57,229.91,1000,751,side,partial,white,0.08191347363515313,5,False,scratch,crack,0.5230104804480662,False,True
+test,442,2240,002240.jpg,dent,True,456.49,446.84,1000,667,front,partial,green,0.30581408035982005,2,False,dent,dent,0.9580158224854746,True,True
+test,443,2240,002240.jpg,scratch,True,192.41,301.92,1000,667,front,partial,green,0.08709509325337332,2,False,scratch,scratch,0.5710449772130477,True,True
+test,444,2252,002252.jpg,dent,True,304.53,287.04,1000,667,rear,partial,silver,0.13105291034482758,4,False,dent,dent,0.8888305946584386,True,True
+test,445,2252,002252.jpg,dent,True,187.54,72.29,1000,667,rear,partial,silver,0.02032573703148426,4,False,dent,dent,0.7990928952158532,True,True
+test,446,2252,002252.jpg,scratch,True,270.18,125.89,1000,667,rear,partial,silver,0.05099394332833583,4,False,scratch,scratch,0.8382715784275044,True,True
+test,447,2252,002252.jpg,crack,True,50.81,140.61,1000,667,rear,partial,silver,0.010711235532233885,4,False,crack,crack,0.9837009073737681,True,True
+test,448,2262,002262.jpg,scratch,True,452.07,500.62,1000,543,side,partial,gray,0.4167868939226519,5,False,scratch,scratch,0.8515879635865635,True,True
+test,449,2262,002262.jpg,scratch,True,97.54,64.62,1000,543,side,partial,gray,0.011607798895027627,5,False,scratch,scratch,0.6602637768907297,True,True
+test,450,2262,002262.jpg,scratch,True,79.83,48.1,1000,543,side,partial,gray,0.00707149723756906,5,False,scratch,dent,0.6075047808477091,False,True
+test,451,2262,002262.jpg,crack,True,50.92,64.38,1000,543,side,partial,gray,0.006037255248618784,5,False,crack,crack,0.6427100143929787,True,True
+test,452,2262,002262.jpg,crack,True,25.2,132.9,1000,543,side,partial,gray,0.006167734806629834,5,False,crack,crack,0.8305811417942226,True,True
+test,453,2267,002267.jpg,crack,True,194.0,18.85,1000,667,rear,partial,silver,0.005482608695652174,4,False,crack,scratch,0.8304064652580325,False,True
+test,454,2267,002267.jpg,crack,True,284.01,207.21,1000,667,rear,partial,silver,0.08823045292353823,4,False,crack,scratch,0.7810106166807386,False,True
+test,455,2267,002267.jpg,crack,True,79.82,282.88,1000,667,rear,partial,silver,0.03385229625187406,4,False,crack,scratch,0.5350717987257491,False,True
+test,456,2267,002267.jpg,lamp broken,True,436.95,319.1,1000,667,rear,partial,silver,0.20904159670164918,4,False,lamp broken,lamp broken,0.9682544489075555,True,True
+test,457,2270,002270.jpg,dent,True,434.18,94.68,1000,714,side,partial,silver,0.057574457142857145,2,False,dent,dent,0.6197562511526628,True,True
+test,458,2270,002270.jpg,dent,True,667.5,143.76,1000,714,side,partial,silver,0.13439747899159663,2,False,dent,dent,0.8779866008266297,True,True
+test,459,2275,002275.jpg,dent,True,745.21,85.34,1000,750,rear,partial,gray,0.08479496186666667,2,False,dent,glass shatter,0.41293460300939616,False,True
+test,460,2275,002275.jpg,lamp broken,True,814.62,512.15,1000,750,rear,partial,gray,0.556276844,2,False,lamp broken,lamp broken,0.9817551949902715,True,True
+test,461,2294,002294.jpg,scratch,True,175.01,132.03,1000,667,side,partial,white,0.034642534182908545,4,False,scratch,scratch,0.6576859797790825,True,True
+test,462,2294,002294.jpg,scratch,True,51.17,66.52,1000,667,side,partial,white,0.005103191004497751,4,False,scratch,scratch,0.8984541979702613,True,True
+test,463,2294,002294.jpg,scratch,True,95.85,167.25,1000,667,side,partial,white,0.02403435157421289,4,False,scratch,scratch,0.501220342536034,True,True
+test,464,2294,002294.jpg,crack,True,137.29,79.38,1000,667,side,partial,white,0.016338950824587705,4,False,crack,dent,0.734603089435591,False,True
+test,465,2299,002299.jpg,dent,True,447.83,347.48,1000,667,side,partial,white,0.2333013019490255,1,False,dent,scratch,0.6680262054541649,False,True
+test,466,2307,002307.jpg,glass shatter,True,913.29,530.67,1000,667,front,partial,,0.726620096401799,1,False,glass shatter,glass shatter,0.9960689818641826,True,True
+test,467,2314,002314.jpg,dent,True,314.73,494.73,667,1000,rear,partial,silver,0.2334428379310345,3,False,dent,glass shatter,0.42540603198097826,False,True
+test,468,2314,002314.jpg,scratch,True,242.52,407.43,667,1000,rear,partial,silver,0.14814081499250376,3,False,scratch,scratch,0.9005775028844399,True,True
+test,469,2314,002314.jpg,lamp broken,True,334.23,648.59,667,1000,rear,partial,silver,0.32500485112443783,3,False,lamp broken,dent,0.45507062543311144,False,True
+test,470,2326,002326.jpg,dent,True,439.61,214.08,1000,668,front,partial,silver,0.14088579161676648,4,False,dent,dent,0.978190246975439,True,True
+test,471,2326,002326.jpg,scratch,True,657.05,249.95,1000,668,front,partial,silver,0.24585276571856285,4,False,scratch,scratch,0.9184334889692102,True,True
+test,472,2326,002326.jpg,scratch,True,138.17,21.5,1000,668,front,partial,silver,0.004447088323353293,4,False,scratch,scratch,0.9266659184980514,True,True
+test,473,2326,002326.jpg,crack,True,423.4,121.13,1000,668,front,partial,silver,0.07677611077844311,4,False,crack,scratch,0.9093902400179441,False,True
+test,474,2330,002330.jpg,dent,True,309.35,309.35,1000,750,front,partial,silver,0.12759656333333336,1,False,dent,dent,0.7842676037629023,True,True
+test,475,2356,002356.jpg,dent,True,382.3,147.08,1000,750,front,partial,silver,0.07497157866666668,3,False,dent,dent,0.901105091042325,True,True
+test,476,2356,002356.jpg,lamp broken,True,126.21,157.1,1000,750,front,partial,silver,0.026436787999999996,3,False,lamp broken,scratch,0.41005828550281737,False,True
+test,477,2356,002356.jpg,lamp broken,True,187.1,122.67,1000,750,front,partial,silver,0.030602076000000002,3,False,lamp broken,lamp broken,0.9031911469699534,True,True
+test,478,2358,002358.jpg,dent,True,76.52,38.47,1000,667,side,partial,silver,0.004413379910044977,2,False,dent,dent,0.7411381207259382,True,True
+test,479,2358,002358.jpg,dent,True,515.23,465.8,1000,667,side,partial,silver,0.35981129535232387,2,False,dent,dent,0.7084567289649895,True,True
+test,480,2380,002380.jpg,dent,True,259.61,150.77,1000,667,side,complete,silver,0.05868275817091455,2,False,dent,dent,0.8193507554689704,True,True
+test,481,2380,002380.jpg,dent,True,303.04,197.7,1000,667,side,complete,silver,0.0898216011994003,2,False,dent,dent,0.8085725365216841,True,True
+test,482,2385,002385.jpg,dent,True,289.52,204.22,1000,668,front,complete,silver,0.08851163832335329,2,False,dent,dent,0.8021854621903963,True,True
+test,483,2385,002385.jpg,scratch,True,248.84,333.33,1000,668,front,complete,silver,0.12417041497005987,2,False,scratch,scratch,0.6842642542313796,True,True
+test,484,2393,002393.jpg,scratch,True,168.21,318.69,1000,667,front,partial,red,0.08037008230884558,2,False,scratch,scratch,0.8694975251293893,True,True
+test,485,2393,002393.jpg,scratch,True,565.89,458.01,1000,667,front,partial,red,0.388580628035982,2,False,scratch,dent,0.5539524871241023,False,True
+test,486,2407,002407.jpg,scratch,True,242.74,207.43,1000,750,side,partial,white,0.06713541093333335,1,False,scratch,scratch,0.7971340264468537,True,True
+test,487,2409,002409.jpg,dent,True,61.72,134.98,1000,667,front,partial,yellow,0.012490203298350823,2,False,dent,dent,0.9248938401657449,True,True
+test,488,2409,002409.jpg,dent,True,219.27,210.74,1000,667,front,partial,yellow,0.06927880029985008,2,False,dent,dent,0.9626370648388777,True,True
+test,489,2422,002422.jpg,dent,True,350.98,87.86,1000,667,side,partial,silver,0.04623253793103448,4,False,dent,dent,0.9369957183406892,True,True
+test,490,2422,002422.jpg,dent,True,594.84,406.24,1000,667,side,partial,silver,0.3622905571214393,4,False,dent,dent,0.9174097671577001,True,True
+test,491,2422,002422.jpg,scratch,True,289.06,226.16,1000,667,side,partial,silver,0.09801170854572713,4,False,scratch,scratch,0.45548801861092686,True,True
+test,492,2422,002422.jpg,scratch,True,347.98,57.58,1000,667,side,partial,silver,0.030040012593703147,4,False,scratch,dent,0.60563625492928,False,True
+test,493,2439,002439.jpg,dent,True,334.58,379.49,1000,750,side,partial,gray,0.16929301893333332,1,False,dent,dent,0.506472002270044,True,True
+test,494,2448,002448.jpg,dent,True,274.46,265.43,1000,667,side,partial,gray,0.10922026656671663,3,False,dent,dent,0.9454901621554777,True,True
+test,495,2448,002448.jpg,dent,True,409.43,252.99,1000,667,side,partial,gray,0.15529489610194905,3,False,dent,scratch,0.47724412991589055,False,True
+test,496,2448,002448.jpg,scratch,True,99.4,130.1,1000,667,side,partial,gray,0.019388215892053973,3,False,scratch,scratch,0.7545937242417294,True,True
+test,497,2461,002461.jpg,dent,True,705.92,490.6,1000,665,side,partial,red,0.5207884992481203,2,False,dent,scratch,0.5395957142235422,False,True
+test,498,2461,002461.jpg,dent,True,336.7,337.55,1000,665,side,partial,red,0.17090689473684212,2,False,dent,dent,0.442290631108559,True,True
+test,499,2467,002467.jpg,scratch,True,519.07,63.25,1000,750,side,partial,white,0.04377490333333334,1,False,scratch,dent,0.6476935150224784,False,True
+test,500,2475,002475.jpg,dent,True,734.96,377.16,1000,667,side,partial,silver,0.4155884761619191,3,False,dent,dent,0.9956139907588984,True,True
+test,501,2475,002475.jpg,dent,True,251.44,158.96,1000,667,side,partial,silver,0.059923391904047975,3,False,dent,dent,0.967226367466329,True,True
+test,502,2475,002475.jpg,lamp broken,True,276.77,232.46,1000,667,side,partial,silver,0.09645870194902549,3,False,lamp broken,dent,0.38155043562630325,False,True
+test,503,2481,002481.jpg,scratch,False,473.95,711.63,1000,970,side,partial,gray,0.347708287113402,1,False,scratch,scratch,0.8095204202584984,True,False
+test,504,2483,002483.jpg,dent,False,510.6,572.01,1000,1000,side,partial,gray,0.292068306,1,False,dent,dent,0.6884165257783299,True,False
+test,505,2498,002498.jpg,dent,True,382.34,51.18,1000,667,side,partial,gray,0.02933757301349325,3,False,dent,dent,0.9488078395076366,True,True
+test,506,2498,002498.jpg,dent,True,351.03,234.22,1000,667,side,partial,gray,0.12326573703148426,3,False,dent,dent,0.7208703698830177,True,True
+test,507,2498,002498.jpg,dent,True,319.12,239.04,1000,667,side,partial,gray,0.11436648395802099,3,False,dent,dent,0.6329844270035521,True,True
+test,508,2502,002502.jpg,scratch,True,166.75,151.78,1000,667,rear,partial,black,0.037945,1,False,scratch,scratch,0.8075093015167242,True,True
+test,509,2508,002508.jpg,dent,True,372.42,336.67,1000,692,side,partial,blue,0.18118878815028902,2,False,dent,dent,0.9206607888851259,True,True
+test,510,2508,002508.jpg,dent,True,438.93,408.24,1000,692,side,partial,blue,0.25894332832369943,2,False,dent,dent,0.9274545447262438,True,True
+test,511,2514,002514.jpg,dent,True,328.15,330.56,1000,667,side,partial,gray,0.16262858170914543,2,False,dent,dent,0.8288928450859495,True,True
+test,512,2514,002514.jpg,scratch,True,486.16,514.72,1000,667,side,partial,gray,0.3751668293853074,2,False,scratch,scratch,0.8089507512821862,True,True
+test,513,2534,002534.jpg,dent,True,39.69,31.15,1000,563,side,partial,silver,0.002195992007104796,3,False,dent,dent,0.8852686271131646,True,True
+test,514,2534,002534.jpg,dent,True,38.69,42.21,1000,563,side,partial,silver,0.0029007191829484905,3,False,dent,dent,0.8413797773210686,True,True
+test,515,2534,002534.jpg,dent,True,152.76,159.3,1000,563,side,partial,silver,0.04322321136767318,3,False,dent,dent,0.9901750592290913,True,True
+test,516,2545,002545.jpg,scratch,True,177.4,341.58,1000,665,front,partial,silver,0.09112224360902256,2,False,scratch,dent,0.5818496898619775,False,True
+test,517,2545,002545.jpg,scratch,True,577.11,257.86,1000,665,front,partial,silver,0.22377982646616543,2,False,scratch,scratch,0.9919754100701269,True,True
+test,518,2552,002552.jpg,scratch,True,280.09,250.56,1000,668,,partial,gray,0.10505890778443114,2,False,scratch,scratch,0.9055116981088716,True,True
+test,519,2552,002552.jpg,crack,True,275.16,272.95,1000,668,,partial,gray,0.11243251796407186,2,False,crack,crack,0.7839677746729351,True,True
+test,520,2567,002567.jpg,dent,True,468.85,130.66,1000,667,,partial,white,0.09184398950524737,2,False,dent,lamp broken,0.8592720590353427,False,True
+test,521,2567,002567.jpg,scratch,True,556.98,178.61,1000,667,,partial,white,0.14914872233883059,2,False,scratch,scratch,0.5505495286717265,True,True
+test,522,2590,002590.jpg,dent,True,590.96,450.58,1000,667,front,partial,silver,0.3992125289355323,3,False,dent,dent,0.8114013461382507,True,True
+test,523,2590,002590.jpg,scratch,True,73.7,125.02,1000,667,front,partial,silver,0.013814053973013494,3,False,scratch,scratch,0.6283800397064983,True,True
+test,524,2590,002590.jpg,lamp broken,True,639.96,253.48,1000,667,front,partial,silver,0.24320398920539732,3,False,lamp broken,lamp broken,0.888270409152072,True,True
+test,525,2597,002597.jpg,dent,True,273.37,95.48,1000,539,side,partial,silver,0.04842554285714286,6,False,dent,dent,0.9357663551484566,True,True
+test,526,2597,002597.jpg,dent,True,141.71,90.46,1000,539,side,partial,silver,0.02378309202226345,6,False,dent,dent,0.9245178047166547,True,True
+test,527,2597,002597.jpg,dent,True,98.0,117.09,1000,539,side,partial,silver,0.021289090909090907,6,False,dent,scratch,0.5223998354356768,False,True
+test,528,2597,002597.jpg,dent,True,113.37,167.03,1000,539,side,partial,silver,0.03513207996289425,6,False,dent,crack,0.5312959135727342,False,True
+test,529,2597,002597.jpg,dent,True,46.24,81.91,1000,539,side,partial,silver,0.007026935807050092,6,False,dent,dent,0.9015081114954393,True,True
+test,530,2597,002597.jpg,scratch,True,157.34,219.47,1000,539,side,partial,silver,0.06406569536178108,6,False,scratch,scratch,0.6392126446664036,True,True
+test,531,2601,002601.jpg,scratch,True,356.28,323.72,667,1000,front,partial,black,0.1729159844077961,4,False,scratch,scratch,0.8205350050425075,True,True
+test,532,2601,002601.jpg,scratch,True,235.35,213.96,667,1000,front,partial,black,0.0754954812593703,4,False,scratch,scratch,0.6891058209217615,True,True
+test,533,2601,002601.jpg,scratch,True,201.86,171.17,667,1000,front,partial,black,0.05180266296851574,4,False,scratch,scratch,0.6335461439144404,True,True
+test,534,2601,002601.jpg,crack,True,9.97,51.53,667,1000,front,partial,black,0.0007702460269865067,4,True,crack,crack,0.4438200951882624,True,True
+test,535,2612,002612.jpg,dent,True,509.17,642.21,1000,750,rear,partial,silver,0.4359920876,1,False,dent,dent,0.7897733522006042,True,True
+test,536,2621,002621.jpg,dent,True,758.81,919.76,800,1000,side,partial,silver,0.872403857,1,False,dent,dent,0.5727239711518473,True,True
+test,537,2624,002624.jpg,dent,True,288.85,126.63,1000,645,side,partial,silver,0.05670864418604651,3,False,dent,dent,0.9478783470629114,True,True
+test,538,2624,002624.jpg,scratch,True,139.54,226.05,1000,645,side,partial,silver,0.048903902325581394,3,False,scratch,scratch,0.8218889759008827,True,True
+test,539,2624,002624.jpg,scratch,True,41.86,43.72,1000,645,side,partial,silver,0.0028373941085271318,3,False,scratch,scratch,0.40283706589419704,True,True
+test,540,2628,002628.jpg,lamp broken,True,516.11,319.88,1000,667,front,partial,silver,0.24751614212893555,1,False,lamp broken,lamp broken,0.6048318818105538,True,True
+test,541,2646,002646.jpg,dent,True,335.18,203.86,1000,667,rear,partial,silver,0.10244347046476762,3,False,dent,scratch,0.8045846843879586,False,True
+test,542,2646,002646.jpg,dent,True,257.29,275.88,1000,667,rear,partial,silver,0.10641853853073464,3,False,dent,dent,0.5471234676502827,True,True
+test,543,2646,002646.jpg,scratch,True,340.0,260.02,1000,667,rear,partial,silver,0.132543928035982,3,False,scratch,scratch,0.895609737313299,True,True
+test,544,2661,002661.jpg,dent,True,247.24,229.65,1000,500,,partial,yellow,0.11355733200000001,2,False,dent,dent,0.9296023030378424,True,True
+test,545,2661,002661.jpg,dent,True,123.62,135.17,1000,500,,partial,yellow,0.0334194308,2,False,dent,dent,0.8976667616985499,True,True
+test,546,2664,002664.jpg,glass shatter,True,988.82,511.1,1000,667,front,partial,silver,0.7577000029985008,1,False,glass shatter,glass shatter,0.9996998361254907,True,True
+test,547,2694,002694.jpg,dent,True,499.25,221.17,1000,667,side,partial,silver,0.1655459107946027,1,False,dent,dent,0.42466227079467106,True,True
+test,548,2707,002707.jpg,dent,True,468.56,101.45,1000,694,side,partial,white,0.06849482997118156,8,False,dent,scratch,0.5541615300546716,False,True
+test,549,2707,002707.jpg,dent,True,118.55,159.07,1000,694,side,partial,white,0.027172548270893368,8,False,dent,dent,0.5712413988261591,True,True
+test,550,2707,002707.jpg,dent,True,246.78,148.18,1000,694,side,partial,white,0.05269144149855909,8,False,dent,dent,0.9698348678732078,True,True
+test,551,2707,002707.jpg,scratch,True,506.47,229.61,1000,694,side,partial,white,0.1675656724783862,8,False,scratch,scratch,0.6720712646865181,True,True
+test,552,2707,002707.jpg,scratch,True,72.2,78.35,1000,694,side,partial,white,0.008151109510086456,8,False,scratch,scratch,0.6246309044161008,True,True
+test,553,2707,002707.jpg,scratch,True,208.3,94.02,1000,694,side,partial,white,0.02821954755043228,8,False,scratch,scratch,0.9173888689451772,True,True
+test,554,2707,002707.jpg,scratch,True,186.42,272.38,1000,694,side,partial,white,0.07316582074927953,8,False,scratch,scratch,0.7230895608086237,True,True
+test,555,2707,002707.jpg,crack,True,66.73,15.92,1000,694,side,partial,white,0.0015307515850144092,8,True,crack,scratch,0.4304523227701517,False,True
+test,556,2716,002716.jpg,scratch,True,151.86,105.37,1000,662,rear,partial,gray,0.02417143232628399,3,False,scratch,scratch,0.8872542539802042,True,True
+test,557,2716,002716.jpg,scratch,True,348.28,83.72,1000,662,rear,partial,gray,0.04404531963746223,3,False,scratch,scratch,0.9744369007909536,True,True
+test,558,2716,002716.jpg,lamp broken,True,494.55,173.76,1000,662,rear,partial,gray,0.12980816918429003,3,False,lamp broken,lamp broken,0.8463112523575844,True,True
+test,559,2728,002728.jpg,dent,True,428.91,174.7,1000,490,rear,partial,silver,0.1529195448979592,4,False,dent,scratch,0.9511623420482286,False,True
+test,560,2728,002728.jpg,dent,True,260.84,121.17,1000,490,rear,partial,silver,0.06450200571428572,4,False,dent,scratch,0.8705755964833718,False,True
+test,561,2728,002728.jpg,scratch,True,884.09,277.96,1000,490,rear,partial,silver,0.5015135844897959,4,False,scratch,scratch,0.909881094031703,True,True
+test,562,2728,002728.jpg,scratch,True,74.79,98.23,1000,490,rear,partial,silver,0.014993105510204083,4,False,scratch,scratch,0.9465412072973882,True,True
+test,563,2741,002741.jpg,dent,True,457.26,361.69,1000,664,side,partial,silver,0.2490758575301205,1,False,dent,dent,0.5908127014703244,True,True
+test,564,2752,002752.jpg,scratch,True,528.0,586.72,1000,667,side,partial,red,0.4644500149925038,2,False,scratch,scratch,0.938138692614408,True,True
+test,565,2752,002752.jpg,scratch,True,551.44,106.04,1000,667,side,partial,red,0.08766821229385309,2,False,scratch,scratch,0.93061569119977,True,True
+test,566,2766,002766.jpg,dent,True,459.68,255.85,1000,667,front,partial,red,0.1763255292353823,2,False,dent,dent,0.9409915383901387,True,True
+test,567,2766,002766.jpg,lamp broken,True,562.93,336.37,1000,667,front,partial,red,0.28388720254872557,2,False,lamp broken,lamp broken,0.995398214906265,True,True
+test,568,2776,002776.jpg,dent,True,106.45,202.02,1000,664,side,partial,red,0.03238709186746988,3,False,dent,dent,0.5458149224728517,True,True
+test,569,2776,002776.jpg,scratch,True,571.44,198.7,1000,664,side,partial,red,0.17100169879518073,3,False,scratch,scratch,0.894560633072421,True,True
+test,570,2776,002776.jpg,scratch,True,428.56,127.11,1000,664,side,partial,red,0.08203955060240964,3,False,scratch,scratch,0.6122777975254519,True,True
+test,571,2789,002789.jpg,scratch,True,223.26,62.51,1000,667,side,partial,silver,0.020923512143928034,2,False,scratch,scratch,0.7444075116096461,True,True
+test,572,2789,002789.jpg,scratch,True,254.51,266.79,1000,667,side,partial,silver,0.10180018425787107,2,False,scratch,scratch,0.981778611916861,True,True
+test,573,2801,002801.jpg,dent,True,167.29,160.55,1000,750,front,partial,white,0.03581121266666667,3,False,dent,dent,0.7710630887298311,True,True
+test,574,2801,002801.jpg,scratch,True,887.44,177.49,1000,750,front,partial,white,0.21001563413333335,3,False,scratch,scratch,0.8657266731590857,True,True
+test,575,2801,002801.jpg,crack,True,143.24,255.25,1000,750,front,partial,white,0.04874934666666667,3,False,crack,dent,0.6645840574337506,False,True
+test,576,2803,002803.jpg,scratch,True,329.3,472.86,1000,667,front,partial,silver,0.2334524707646177,1,False,scratch,scratch,0.8568411237023096,True,True
+test,577,2810,002810.jpg,crack,True,27.18,257.4,1000,668,,partial,yellow,0.010473251497005988,1,False,crack,scratch,0.5297399817377312,False,True
+test,578,2814,002814.jpg,dent,True,501.53,482.25,1000,667,side,partial,silver,0.36261295727136433,2,False,dent,scratch,0.929757989115347,False,True
+test,579,2814,002814.jpg,dent,True,486.25,639.96,1000,667,side,partial,silver,0.46653755622188914,2,False,dent,scratch,0.8327895044081667,False,True
+test,580,2825,002825.jpg,scratch,True,244.18,293.78,1000,667,side,partial,silver,0.10754902608695652,2,False,scratch,scratch,0.8243789060158995,True,True
+test,581,2825,002825.jpg,scratch,True,703.4,540.95,1000,667,side,partial,silver,0.5704711094452775,2,False,scratch,scratch,0.9703463997790545,True,True
+test,582,2833,002833.jpg,scratch,True,137.67,379.85,665,1000,front,partial,red,0.07863751804511278,2,False,scratch,scratch,0.9291826069508499,True,True
+test,583,2833,002833.jpg,scratch,True,316.28,533.34,665,1000,front,partial,red,0.2536613160902256,2,False,scratch,scratch,0.9057404831614311,True,True
+test,584,2849,002849.jpg,scratch,True,421.41,122.76,692,1000,,partial,black,0.07475764682080925,2,False,scratch,scratch,0.5454526599150082,True,True
+test,585,2849,002849.jpg,scratch,True,412.42,563.62,692,1000,,partial,black,0.3359077462427746,2,False,scratch,scratch,0.7745123081728316,True,True
+test,586,2858,002858.jpg,scratch,True,72.19,113.6,1000,691,,partial,silver,0.011867994211287989,3,False,scratch,scratch,0.9911010489758765,True,True
+test,587,2858,002858.jpg,scratch,True,30.0,55.34,1000,691,,partial,silver,0.00240260492040521,3,False,scratch,scratch,0.7674698787593974,True,True
+test,588,2858,002858.jpg,scratch,True,248.37,223.25,1000,691,,partial,silver,0.080243997829233,3,False,scratch,scratch,0.7212773708531136,True,True
+test,589,2865,002865.jpg,scratch,True,442.33,376.6,1000,750,side,partial,white,0.22210863733333333,1,False,scratch,scratch,0.7207956687621946,True,True
+test,590,2879,002879.jpg,scratch,True,636.35,256.74,1000,667,side,partial,brown,0.24494227736131935,2,False,scratch,scratch,0.9180314463911196,True,True
+test,591,2879,002879.jpg,scratch,True,218.07,213.12,1000,667,side,partial,brown,0.06967777871064468,2,False,scratch,scratch,0.8165540751118066,True,True
+test,592,2887,002887.jpg,dent,True,419.76,388.91,1000,666,side,partial,silver,0.24511841081081082,1,False,dent,dent,0.7997102798740574,True,True
+test,593,2898,002898.jpg,dent,False,345.96,285.48,1000,667,rear,complete,silver,0.14807295472263868,1,False,dent,dent,0.9352560983436152,True,False
+test,594,2908,002908.jpg,dent,True,182.66,260.08,1000,667,side,partial,silver,0.07122370734632683,1,False,dent,dent,0.95632938423552,True,True
+test,595,2914,002914.jpg,scratch,True,435.32,52.87,1000,664,front,partial,silver,0.03466169939759036,2,False,scratch,glass shatter,0.7072254528780083,False,True
+test,596,2914,002914.jpg,scratch,True,782.35,312.25,1000,664,front,partial,silver,0.36790480045180723,2,False,scratch,scratch,0.6265184833126555,True,True
+test,597,2922,002922.jpg,dent,True,189.31,261.29,1000,667,,partial,black,0.0741601347826087,1,False,dent,dent,0.6000449950879624,True,True
+test,598,2931,002931.jpg,scratch,True,526.48,391.64,1000,654,rear,partial,black,0.3152761883792049,2,False,scratch,lamp broken,0.5648225244485312,False,True
+test,599,2931,002931.jpg,lamp broken,True,511.46,142.77,1000,654,rear,partial,black,0.11165312568807338,2,False,lamp broken,lamp broken,0.4158297166614017,True,True
+test,600,2953,002953.jpg,scratch,True,276.94,666.17,667,1000,rear,partial,silver,0.27659538200899547,1,False,scratch,scratch,0.6578326154102403,True,True
+test,601,2961,002961.jpg,dent,True,598.06,429.68,1000,667,side,partial,blue,0.38526899670164916,3,False,dent,dent,0.924210531049703,True,True
+test,602,2961,002961.jpg,scratch,True,147.78,343.75,1000,667,side,partial,blue,0.0761609820089955,3,False,scratch,scratch,0.9395856969208929,True,True
+test,603,2961,002961.jpg,scratch,True,148.69,213.12,1000,667,side,partial,blue,0.04750946446776612,3,False,scratch,scratch,0.8955039344545267,True,True
+test,604,2986,002986.jpg,dent,True,179.27,174.92,1000,667,rear,partial,silver,0.04701335592203898,2,False,dent,dent,0.9929522855872351,True,True
+test,605,2986,002986.jpg,lamp broken,True,212.61,191.59,1000,667,rear,partial,silver,0.061070389655172426,2,False,lamp broken,lamp broken,0.987527200457673,True,True
+test,606,2991,002991.jpg,scratch,True,236.91,252.77,1000,667,rear,partial,white,0.08978072068965517,2,False,scratch,scratch,0.6565826374943867,True,True
+test,607,2991,002991.jpg,lamp broken,True,525.0,357.41,1000,667,rear,partial,white,0.28131971514242876,2,False,lamp broken,lamp broken,0.5753229714508078,True,True
+test,608,3011,003011.jpg,dent,True,512.23,118.82,1000,667,side,partial,white,0.09124912833583208,2,False,dent,scratch,0.6835921597471106,False,True
+test,609,3011,003011.jpg,scratch,True,213.03,154.63,1000,667,side,partial,white,0.04938655007496252,2,False,scratch,scratch,0.5684247831567574,True,True
+test,610,3027,003027.jpg,glass shatter,True,877.12,507.59,1000,667,front,partial,white,0.6674922650674663,1,False,glass shatter,glass shatter,0.9960339384485559,True,True
+test,611,3039,003039.jpg,glass shatter,True,667.0,742.79,667,1000,front,partial,white,0.74279,1,False,glass shatter,glass shatter,0.9788284160495501,True,True
+test,612,3050,003050.jpg,glass shatter,True,1000.0,736.69,1000,750,front,partial,,0.9822533333333333,1,False,glass shatter,glass shatter,0.9647066548560969,True,True
+test,613,3062,003062.jpg,glass shatter,True,1000.0,618.42,1000,667,front,partial,silver,0.9271664167916042,1,False,glass shatter,glass shatter,0.9999116542913599,True,True
+test,614,3071,003071.jpg,glass shatter,True,1000.0,643.21,1000,667,front,partial,,0.9643328335832084,1,False,glass shatter,glass shatter,0.9983197969504473,True,True
+test,615,3082,003082.jpg,glass shatter,True,1000.0,667.0,1000,667,front,partial,,1.0,1,False,glass shatter,glass shatter,0.4954109333788024,True,True
+test,616,3087,003087.jpg,scratch,True,267.88,215.1,1000,662,front,partial,silver,0.0870407673716012,6,False,scratch,dent,0.7221901832820137,False,True
+test,617,3087,003087.jpg,scratch,True,157.19,191.75,1000,662,front,partial,silver,0.04553048716012084,6,False,scratch,scratch,0.5106265498307491,True,True
+test,618,3087,003087.jpg,crack,True,64.94,74.32,1000,662,front,partial,silver,0.0072905450151057385,6,False,crack,crack,0.9357411963055647,True,True
+test,619,3087,003087.jpg,crack,True,30.99,25.67,1000,662,front,partial,silver,0.0012016817220543805,6,False,crack,dent,0.6719185235526842,False,True
+test,620,3087,003087.jpg,crack,True,135.3,55.61,1000,662,front,partial,silver,0.011365608761329306,6,False,crack,scratch,0.4896000359795206,False,True
+test,621,3087,003087.jpg,lamp broken,True,373.17,198.79,1000,662,front,partial,silver,0.11205810317220545,6,False,lamp broken,lamp broken,0.99384447396387,True,True
+test,622,3099,003099.jpg,glass shatter,True,980.11,585.34,1000,667,front,partial,,0.8601163229385308,1,False,glass shatter,scratch,0.6391906056043887,False,True
+test,623,3109,003109.jpg,lamp broken,True,533.77,249.5,563,1000,front,partial,white,0.23654638543516873,1,False,lamp broken,lamp broken,0.985177079074667,True,True
+test,624,3115,003115.jpg,dent,True,477.82,258.13,1000,667,side,partial,blue,0.18491705637181408,2,False,dent,dent,0.9381142591367863,True,True
+test,625,3115,003115.jpg,glass shatter,True,613.94,356.54,1000,667,side,partial,blue,0.3281771628185908,2,False,glass shatter,glass shatter,0.9999943546015939,True,True
+test,626,3124,003124.jpg,glass shatter,True,1000.0,362.65,1000,667,rear,partial,silver,0.5437031484257872,1,False,glass shatter,glass shatter,0.9344528351887659,True,True
+test,627,3140,003140.jpg,glass shatter,True,694.63,619.13,1000,667,side,partial,black,0.6447770193403298,1,False,glass shatter,glass shatter,0.9060842446314874,True,True
+test,628,3156,003156.jpg,glass shatter,True,520.29,377.52,1000,667,side,partial,yellow,0.29448257991004495,1,False,glass shatter,glass shatter,0.37251677567817204,True,True
+test,629,3166,003166.jpg,glass shatter,True,849.21,538.14,1000,667,front,partial,white,0.6851482299850076,1,False,glass shatter,glass shatter,0.9998291007041862,True,True
+test,630,3175,003175.jpg,dent,True,613.58,351.47,1000,667,front,partial,red,0.32332078350824595,4,False,dent,dent,0.36382862055757226,True,True
+test,631,3175,003175.jpg,dent,True,340.49,43.43,1000,667,front,partial,red,0.022170135982008995,4,False,dent,dent,0.518028433831907,True,True
+test,632,3175,003175.jpg,glass shatter,True,632.24,258.19,1000,667,front,partial,red,0.24473470104947528,4,False,glass shatter,glass shatter,0.9962535706772074,True,True
+test,633,3175,003175.jpg,lamp broken,True,150.61,153.27,1000,667,front,partial,red,0.03460868770614693,4,False,lamp broken,lamp broken,0.33132210499023057,True,True
+test,634,3187,003187.jpg,scratch,False,64.43,131.84,1000,667,side,partial,white,0.012735309145427288,3,False,scratch,scratch,0.8561391573936604,True,False
+test,635,3187,003187.jpg,scratch,False,232.94,58.48,1000,667,side,partial,white,0.020423285157421287,3,False,scratch,scratch,0.9225442311570348,True,False
+test,636,3187,003187.jpg,scratch,False,223.03,52.12,1000,667,side,partial,white,0.01742777151424288,3,False,scratch,scratch,0.9841381393204057,True,False
+test,637,3201,003201.jpg,dent,True,166.9,347.96,1000,667,front,partial,pink,0.08706825187406296,2,False,dent,scratch,0.5434756793891197,False,True
+test,638,3201,003201.jpg,glass shatter,True,1000.0,519.72,1000,667,front,partial,pink,0.7791904047976012,2,False,glass shatter,glass shatter,0.9539656813140193,True,True
+test,639,3226,003226.jpg,dent,True,283.68,182.64,761,1000,front,partial,silver,0.0680832,4,False,dent,dent,0.9801278813351049,True,True
+test,640,3226,003226.jpg,crack,True,165.14,149.59,761,1000,front,partial,silver,0.0324616197109067,4,False,crack,crack,0.6188375521925421,True,True
+test,641,3226,003226.jpg,crack,True,79.22,35.18,761,1000,front,partial,silver,0.0036622333771353485,4,False,crack,crack,0.7273636241163333,True,True
+test,642,3226,003226.jpg,glass shatter,True,354.73,227.58,761,1000,front,partial,silver,0.10608338160315377,4,False,glass shatter,dent,0.5141223724988813,False,True
+test,643,3233,003233.jpg,glass shatter,True,1000.0,667.0,1000,667,front,partial,,1.0,1,False,glass shatter,dent,0.6168287942939489,False,True
+test,644,3244,003244.jpg,glass shatter,True,1000.0,667.0,1000,667,,partial,,1.0,1,False,glass shatter,scratch,0.5891318557620346,False,True
+test,645,3246,003246.jpg,dent,True,200.7,81.87,1000,667,side,partial,white,0.024634646176911548,4,False,dent,scratch,0.5637876500785794,False,True
+test,646,3246,003246.jpg,scratch,True,447.68,360.82,1000,667,side,partial,white,0.2421767580209895,4,False,scratch,scratch,0.8252466124117616,True,True
+test,647,3246,003246.jpg,scratch,True,113.77,278.23,1000,667,side,partial,white,0.047457611844077964,4,False,scratch,scratch,0.939285850422784,True,True
+test,648,3246,003246.jpg,scratch,True,139.39,199.25,1000,667,side,partial,white,0.041639366566716636,4,False,scratch,scratch,0.8996111410839693,True,True
+test,649,3256,003256.jpg,glass shatter,True,1000.0,607.84,1000,667,rear,partial,blue,0.9113043478260869,1,False,glass shatter,glass shatter,0.8756967214703529,True,True
+test,650,3268,003268.jpg,dent,True,240.28,191.79,1000,667,side,partial,silver,0.06909040659670165,2,False,dent,dent,0.6694115857514913,True,True
+test,651,3268,003268.jpg,glass shatter,True,234.52,225.94,1000,667,side,partial,silver,0.07944145247376312,2,False,glass shatter,glass shatter,0.9781907164957354,True,True
+test,652,3283,003283.jpg,dent,True,96.34,129.63,1000,667,front,partial,gray,0.018723469565217393,3,False,dent,scratch,0.5086730957995653,False,True
+test,653,3283,003283.jpg,scratch,True,615.08,128.48,1000,667,front,partial,gray,0.11847897811094452,3,False,scratch,crack,0.5954104670406158,False,True
+test,654,3283,003283.jpg,lamp broken,True,874.74,466.07,1000,667,front,partial,gray,0.6112294929535232,3,False,lamp broken,lamp broken,0.986720140171001,True,True
+test,655,3289,003289.jpg,glass shatter,True,938.85,550.21,1000,667,rear,partial,gray,0.7744597578710645,1,False,glass shatter,glass shatter,0.9117541946831881,True,True
+test,656,3291,003291.jpg,lamp broken,True,393.75,623.65,1000,667,rear,partial,gray,0.3681592016491754,1,False,lamp broken,lamp broken,0.9990769647677672,True,True
+test,657,3296,003296.jpg,tire flat,True,321.65,285.91,1000,667,side,partial,gray,0.13787548950524736,1,False,tire flat,tire flat,0.999999997519185,True,True
+test,658,3301,003301.jpg,glass shatter,True,792.8,654.32,1000,750,side,partial,yellow,0.6916598613333333,1,False,glass shatter,glass shatter,0.9901114577758865,True,True
+test,659,3316,003316.jpg,glass shatter,True,733.9,667.0,1000,667,front,partial,white,0.7339,1,False,glass shatter,glass shatter,0.6357762222172407,True,True
+test,660,3327,003327.jpg,glass shatter,True,766.7,584.37,1000,657,front,partial,,0.681942890410959,1,False,glass shatter,glass shatter,0.9945630335349883,True,True
+test,661,3338,003338.jpg,scratch,True,308.47,142.02,1000,563,side,complete,mixture,0.0778133381882771,2,False,scratch,scratch,0.9889185192491412,True,True
+test,662,3338,003338.jpg,glass shatter,True,264.31,77.59,1000,563,side,complete,mixture,0.03642595541740675,2,False,glass shatter,glass shatter,0.7835002280439867,True,True
+test,663,3345,003345.jpg,crack,True,264.13,41.66,1000,748,front,partial,black,0.014710769786096254,2,False,crack,scratch,0.7581129263970999,False,True
+test,664,3345,003345.jpg,lamp broken,True,599.58,384.13,1000,748,front,partial,black,0.3079099804812835,2,False,lamp broken,lamp broken,0.9159818212034343,True,True
+test,665,3354,003354.jpg,dent,True,328.62,99.8,1000,667,rear,partial,silver,0.04916982908545727,5,False,dent,dent,0.3728118192037747,True,True
+test,666,3354,003354.jpg,dent,True,169.86,138.68,1000,667,rear,partial,silver,0.03531661889055473,5,False,dent,dent,0.9713241230388648,True,True
+test,667,3354,003354.jpg,scratch,True,243.85,166.54,1000,667,rear,partial,silver,0.0608857256371814,5,False,scratch,scratch,0.8068177802772618,True,True
+test,668,3354,003354.jpg,crack,True,22.84,22.62,1000,667,rear,partial,silver,0.0007745739130434783,5,False,crack,crack,0.9069667744869825,True,True
+test,669,3354,003354.jpg,lamp broken,True,361.59,249.37,1000,667,rear,partial,silver,0.13518695397301347,5,False,lamp broken,lamp broken,0.8816334339950915,True,True
+test,670,3367,003367.jpg,scratch,True,51.15,143.93,1000,668,rear,partial,white,0.011020987275449102,2,False,scratch,scratch,0.9532262110248171,True,True
+test,671,3367,003367.jpg,lamp broken,True,528.19,285.42,1000,668,rear,partial,white,0.22568261946107787,2,False,lamp broken,lamp broken,0.9755682394310002,True,True
+test,672,3392,003392.jpg,scratch,True,109.43,229.86,1000,667,rear,partial,gray,0.03771151394302849,2,False,scratch,scratch,0.9967558306963438,True,True
+test,673,3392,003392.jpg,lamp broken,True,476.13,422.6,1000,667,rear,partial,gray,0.30166797301349324,2,False,lamp broken,lamp broken,0.7096700172335355,True,True
+test,674,3399,003399.jpg,lamp broken,True,681.86,511.62,1000,668,front,partial,red,0.5222353491017964,1,False,lamp broken,lamp broken,0.7841425820542673,True,True
+test,675,3407,003407.jpg,scratch,False,617.51,70.17,1000,750,side,partial,gray,0.05777423560000001,4,False,scratch,scratch,0.9378647245153822,True,False
+test,676,3407,003407.jpg,scratch,False,58.29,110.62,1000,750,side,partial,gray,0.0085973864,4,False,scratch,scratch,0.9308828732264036,True,False
+test,677,3407,003407.jpg,scratch,False,451.91,81.96,1000,750,side,partial,gray,0.049384724799999995,4,False,scratch,scratch,0.9894808727574603,True,False
+test,678,3407,003407.jpg,scratch,False,165.34,17.89,1000,750,side,partial,gray,0.003943910133333333,4,False,scratch,scratch,0.9712341523208987,True,False
+test,679,3414,003414.jpg,dent,False,341.74,241.93,1000,668,front,partial,white,0.1237682008982036,6,False,dent,dent,0.5071271151078617,True,False
+test,680,3414,003414.jpg,dent,False,316.94,307.03,1000,668,front,partial,white,0.1456737847305389,6,False,dent,dent,0.9364105094673395,True,False
+test,681,3414,003414.jpg,scratch,False,374.4,44.64,1000,668,front,partial,white,0.025019784431137726,6,False,scratch,scratch,0.857271677325667,True,False
+test,682,3414,003414.jpg,scratch,False,570.96,193.98,1000,668,front,partial,white,0.16580062994011976,6,False,scratch,scratch,0.9310464895179645,True,False
+test,683,3414,003414.jpg,scratch,False,176.5,88.5,1000,668,front,partial,white,0.02338360778443114,6,False,scratch,scratch,0.9025356128471782,True,False
+test,684,3414,003414.jpg,lamp broken,False,931.32,303.45,1000,668,front,partial,white,0.42306744610778446,6,False,lamp broken,lamp broken,0.9338777531073702,True,False
+test,685,3418,003418.jpg,crack,True,209.3,223.65,1000,750,side,partial,gray,0.06241326000000001,1,False,crack,scratch,0.4524641674262362,False,True
+test,686,3424,003424.jpg,dent,True,598.18,574.59,750,1000,front,partial,black,0.4582776616,2,False,dent,dent,0.8101199104466161,True,True
+test,687,3424,003424.jpg,scratch,True,435.36,165.34,750,1000,front,partial,black,0.09597656320000002,2,False,scratch,scratch,0.7886309402047945,True,True
+test,688,3434,003434.jpg,scratch,True,121.33,272.4,1000,665,side,partial,gray,0.0496996872180451,1,False,scratch,scratch,0.8340074308571078,True,True
+test,689,3441,003441.jpg,dent,True,330.24,305.45,1000,667,front,partial,white,0.151232095952024,3,False,dent,dent,0.6436705675411915,True,True
+test,690,3441,003441.jpg,scratch,True,484.13,222.72,1000,667,front,partial,white,0.16165732173913044,3,False,scratch,scratch,0.8871403326647437,True,True
+test,691,3441,003441.jpg,lamp broken,True,549.91,260.71,1000,667,front,partial,white,0.2149430826086956,3,False,lamp broken,lamp broken,0.9946061343050709,True,True
+test,692,3454,003454.jpg,scratch,True,385.4,80.89,1000,750,,partial,gray,0.041566674666666664,1,False,scratch,scratch,0.9630808370058821,True,True
+test,693,3464,003464.jpg,scratch,True,224.58,209.73,1000,667,side,partial,black,0.07061643688155922,2,False,scratch,scratch,0.9086650302350245,True,True
+test,694,3464,003464.jpg,scratch,True,150.27,299.73,1000,667,side,partial,black,0.06752687721139432,2,False,scratch,scratch,0.7226645455006682,True,True
+test,695,3472,003472.jpg,scratch,True,65.4,175.74,1000,667,front,partial,silver,0.01723147826086957,1,False,scratch,scratch,0.6583974786410098,True,True
+test,696,3477,003477.jpg,scratch,True,978.78,272.47,1000,667,,partial,white,0.39983236371814096,1,False,scratch,scratch,0.7089276465578308,True,True
+test,697,3492,003492.jpg,scratch,True,268.71,365.02,1000,731,side,partial,red,0.13417855567715456,2,False,scratch,crack,0.84709701574166,False,True
+test,698,3492,003492.jpg,scratch,True,297.24,570.71,1000,731,side,partial,red,0.2320627091655267,2,False,scratch,scratch,0.5381849836578234,True,True
+test,699,3516,003516.jpg,scratch,True,429.22,229.48,1000,648,front,partial,gray,0.15200216913580247,2,False,scratch,dent,0.3506736589659204,False,True
+test,700,3516,003516.jpg,lamp broken,True,564.17,206.44,1000,648,front,partial,gray,0.17973341790123457,2,False,lamp broken,lamp broken,0.9850651684046307,True,True
+test,701,3533,003533.jpg,scratch,True,487.48,126.03,1000,750,front,partial,gray,0.0819161392,4,False,scratch,scratch,0.9508201032031184,True,True
+test,702,3533,003533.jpg,scratch,True,391.17,19.03,1000,750,front,partial,gray,0.0099252868,4,False,scratch,scratch,0.961122296773211,True,True
+test,703,3533,003533.jpg,scratch,True,353.13,227.09,1000,750,front,partial,gray,0.1069230556,4,False,scratch,scratch,0.7171987644758294,True,True
+test,704,3533,003533.jpg,scratch,True,99.36,243.07,1000,750,front,partial,gray,0.0322019136,4,False,scratch,scratch,0.9656738312717588,True,True
+test,705,3541,003541.jpg,scratch,True,772.84,223.53,1000,667,side,partial,brown,0.258999887856072,3,False,scratch,lamp broken,0.466990394139943,False,True
+test,706,3541,003541.jpg,crack,True,137.39,141.28,1000,667,side,partial,brown,0.029101138230884553,3,False,crack,scratch,0.42735381501993136,False,True
+test,707,3541,003541.jpg,crack,True,20.23,75.56,1000,667,side,partial,brown,0.0022917223388305846,3,False,crack,crack,0.9598453308365912,True,True
+test,708,3542,003542.jpg,crack,True,224.16,58.8,1000,750,front,partial,red,0.017574143999999996,1,False,crack,scratch,0.46441487288527544,False,True
+test,709,3554,003554.jpg,scratch,True,221.15,219.96,1000,667,side,partial,red,0.07292976611694153,2,False,scratch,scratch,0.7641202813495691,True,True
+test,710,3554,003554.jpg,scratch,True,761.82,618.27,1000,667,side,partial,red,0.706162595802099,2,False,scratch,scratch,0.7082598989653195,True,True
+test,711,3561,003561.jpg,scratch,True,536.23,535.04,1000,667,front,partial,black,0.43014167796101943,1,False,scratch,scratch,0.9706860372220444,True,True
+test,712,3573,003573.jpg,scratch,True,72.39,159.26,1000,667,,partial,black,0.0172846047976012,2,False,scratch,scratch,0.6815779155589662,True,True
+test,713,3573,003573.jpg,scratch,True,621.57,282.08,1000,667,,partial,black,0.2628672647676162,2,False,scratch,scratch,0.6675944152328463,True,True
+test,714,3586,003586.jpg,scratch,True,561.11,468.08,1000,667,side,partial,black,0.39376966836581706,2,False,scratch,scratch,0.9829362745337993,True,True
+test,715,3586,003586.jpg,scratch,True,417.49,417.33,1000,667,side,partial,black,0.2612160445277361,2,False,scratch,scratch,0.9324723909873044,True,True
+test,716,3589,003589.jpg,scratch,True,178.23,95.86,1000,667,rear,partial,gray,0.025614884257871062,2,False,scratch,dent,0.4392592956085795,False,True
+test,717,3589,003589.jpg,scratch,True,952.57,367.95,1000,667,rear,partial,gray,0.5254844550224888,2,False,scratch,scratch,0.9740484380556853,True,True
+test,718,3612,003612.jpg,scratch,True,473.07,123.31,1000,750,side,partial,gray,0.0777790156,4,False,scratch,scratch,0.5826868929414235,True,True
+test,719,3612,003612.jpg,scratch,True,924.9,270.93,1000,750,side,partial,gray,0.334110876,4,False,scratch,scratch,0.6475305244338798,True,True
+test,720,3612,003612.jpg,scratch,True,677.72,159.33,1000,750,side,partial,gray,0.1439748368,4,False,scratch,scratch,0.8281297770619083,True,True
+test,721,3612,003612.jpg,scratch,True,104.63,97.5,1000,750,side,partial,gray,0.013601899999999998,4,False,scratch,scratch,0.829617433065593,True,True
+test,722,3626,003626.jpg,scratch,True,854.49,400.36,1000,667,side,partial,gray,0.5128989751124438,1,False,scratch,scratch,0.8669480117206133,True,True
+test,723,3634,003634.jpg,scratch,True,527.9,61.82,1000,667,side,partial,red,0.04892770314842578,1,False,scratch,scratch,0.9795057178900308,True,True
+test,724,3649,003649.jpg,scratch,True,282.98,254.44,1000,704,side,partial,white,0.10227476022727273,2,False,scratch,scratch,0.952766100425794,True,True
+test,725,3649,003649.jpg,scratch,True,472.02,353.87,1000,704,side,partial,white,0.23726380312499998,2,False,scratch,scratch,0.4560319027591966,True,True
+test,726,3656,003656.jpg,scratch,True,520.77,253.37,1000,662,side,partial,black,0.19931645755287009,1,False,scratch,scratch,0.8896964421671465,True,True
+test,727,3671,003671.jpg,scratch,True,259.1,61.17,1000,751,,partial,blue,0.02110405725699068,1,False,scratch,scratch,0.9630783601306121,True,True
+test,728,3683,003683.jpg,scratch,True,190.39,502.38,1000,563,front,partial,silver,0.16989010337477797,1,False,scratch,scratch,0.5528032656088623,True,True
+test,729,3690,003690.jpg,dent,True,119.97,77.89,1000,667,side,complete,silver,0.014009690104947525,2,False,dent,dent,0.9061490205851216,True,True
+test,730,3690,003690.jpg,dent,True,193.17,126.05,1000,667,side,complete,silver,0.03650536506746627,2,False,dent,dent,0.8560796436795695,True,True
+test,731,3695,003695.jpg,scratch,True,682.48,131.97,1000,750,rear,partial,gray,0.12008918080000001,1,False,scratch,lamp broken,0.6094289881088252,False,True
+test,732,3703,003703.jpg,scratch,True,273.46,223.53,1000,750,,partial,blue,0.08150201839999999,1,False,scratch,scratch,0.935789395565424,True,True
+test,733,3720,003720.jpg,glass shatter,True,1000.0,492.84,1000,667,front,partial,red,0.7388905547226386,1,False,glass shatter,glass shatter,0.9416758158690451,True,True
+test,734,3734,003734.jpg,dent,True,74.78,95.34,1000,667,side,partial,gray,0.010688943328335832,4,False,dent,dent,0.44059039208421036,True,True
+test,735,3734,003734.jpg,scratch,True,174.41,25.81,1000,667,side,partial,gray,0.006748908695652174,4,False,scratch,scratch,0.8189525116489779,True,True
+test,736,3734,003734.jpg,crack,True,46.56,52.15,1000,667,side,partial,gray,0.0036403358320839583,4,False,crack,crack,0.4614415793278983,True,True
+test,737,3734,003734.jpg,lamp broken,True,155.82,108.83,1000,667,side,partial,gray,0.02542412383808096,4,False,lamp broken,lamp broken,0.9259181449861069,True,True
+test,738,3743,003743.jpg,dent,True,184.0,351.14,1000,654,side,partial,blue,0.09879168195718653,4,False,dent,dent,0.5506321811595054,True,True
+test,739,3743,003743.jpg,dent,True,467.6,375.88,1000,654,side,partial,blue,0.2687484525993884,4,False,dent,dent,0.5441657396976196,True,True
+test,740,3743,003743.jpg,dent,True,22.62,17.76,1000,654,side,partial,blue,0.0006142678899082569,4,False,dent,dent,0.9435327031501713,True,True
+test,741,3743,003743.jpg,scratch,True,241.76,139.7,1000,654,side,partial,blue,0.05164200611620794,4,False,scratch,scratch,0.9407792202176274,True,True
+test,742,3748,003748.jpg,glass shatter,True,1000.0,480.89,1000,667,rear,partial,white,0.7209745127436282,1,False,glass shatter,glass shatter,0.6678972906212998,True,True
+test,743,3768,003768.jpg,glass shatter,True,765.92,668.0,1000,668,front,partial,,0.76592,1,False,glass shatter,glass shatter,0.9975590047023895,True,True
+test,744,3782,003782.jpg,glass shatter,True,948.64,664.0,1000,664,side,partial,,0.9486399999999999,1,False,glass shatter,glass shatter,0.5219813811602602,True,True
+test,745,3789,003789.jpg,lamp broken,True,464.2,588.04,1000,667,rear,partial,white,0.40924762818590704,1,False,lamp broken,lamp broken,0.9988460719210516,True,True
+test,746,3793,003793.jpg,dent,True,293.4,115.57,1000,667,front,partial,blue,0.05083693853073463,2,False,dent,dent,0.640158145743406,True,True
+test,747,3793,003793.jpg,glass shatter,True,1000.0,536.9,1000,667,front,partial,blue,0.8049475262368816,2,False,glass shatter,glass shatter,0.99881026435734,True,True
+test,748,3804,003804.jpg,glass shatter,True,907.44,506.24,1000,667,front,partial,white,0.6887292737631184,1,False,glass shatter,glass shatter,0.7216708828292959,True,True
+test,749,3812,003812.jpg,glass shatter,True,647.66,439.97,1000,681,front,partial,white,0.4184302058737151,1,False,glass shatter,glass shatter,0.9306847431863045,True,True
+test,750,3823,003823.jpg,glass shatter,True,973.8,667.0,1000,667,front,partial,,0.9738,1,False,glass shatter,glass shatter,0.4132094465398136,True,True
+test,751,3829,003829.jpg,dent,True,216.69,119.01,1000,750,side,complete,white,0.0343843692,4,False,dent,scratch,0.812432766091267,False,True
+test,752,3829,003829.jpg,dent,True,188.26,214.43,1000,750,side,complete,white,0.05382478906666667,4,False,dent,dent,0.8406143684670047,True,True
+test,753,3829,003829.jpg,dent,True,102.13,116.4,1000,750,side,complete,white,0.015850576,4,False,dent,dent,0.42204838907432735,True,True
+test,754,3829,003829.jpg,tire flat,True,96.79,168.77,1000,750,side,complete,white,0.021780331066666672,4,False,tire flat,dent,0.5330267862911748,False,True
+test,755,3831,003831.jpg,scratch,True,203.68,76.32,1000,667,,partial,gray,0.023305633583208394,3,False,scratch,scratch,0.9154906449503732,True,True
+test,756,3831,003831.jpg,scratch,True,108.34,287.07,1000,667,,partial,gray,0.04662843148425787,3,False,scratch,scratch,0.7069045623968229,True,True
+test,757,3831,003831.jpg,crack,True,37.44,142.29,1000,667,,partial,gray,0.007987012893553221,3,False,crack,crack,0.9022243512570534,True,True
+test,758,3842,003842.jpg,scratch,True,763.51,182.31,1000,750,side,partial,white,0.18559401080000001,2,False,scratch,scratch,0.8318469534099187,True,True
+test,759,3842,003842.jpg,scratch,True,452.8,515.19,1000,750,side,partial,white,0.31103737600000003,2,False,scratch,scratch,0.7810867994800244,True,True
+test,760,3872,003872.jpg,dent,True,938.55,275.67,1000,534,front,partial,black,0.48451325561797753,2,False,dent,dent,0.9195405163502681,True,True
+test,761,3872,003872.jpg,glass shatter,True,938.91,261.1,1000,534,front,partial,black,0.4590812752808989,2,False,glass shatter,glass shatter,0.5872018005494368,True,True
+test,762,3879,003879.jpg,dent,True,552.42,369.45,1000,667,rear,partial,gray,0.3059843613193403,2,False,dent,dent,0.8294565455463645,True,True
+test,763,3879,003879.jpg,lamp broken,True,551.82,258.22,1000,667,rear,partial,gray,0.2136296257871065,2,False,lamp broken,scratch,0.6124040062226042,False,True
+test,764,3887,003887.jpg,glass shatter,True,1000.0,624.62,1000,667,front,partial,,0.9364617691154423,1,False,glass shatter,glass shatter,0.9476089133559246,True,True
+test,765,3905,003905.jpg,glass shatter,True,1000.0,662.0,1000,662,front,partial,,1.0,1,False,glass shatter,glass shatter,0.9977735549639826,True,True
+test,766,3908,003908.jpg,dent,True,452.62,319.56,1000,669,side,partial,gray,0.21620216322869956,1,False,dent,scratch,0.5202782404953361,False,True
+test,767,3925,003925.jpg,dent,True,144.56,225.99,1000,740,front,complete,gray,0.0441474518918919,6,False,dent,dent,0.8100241729141733,True,True
+test,768,3925,003925.jpg,dent,True,293.1,182.33,1000,740,front,complete,gray,0.07221746351351353,6,False,dent,dent,0.9282445440459636,True,True
+test,769,3925,003925.jpg,scratch,True,153.58,182.31,1000,740,front,complete,gray,0.03783671594594595,6,False,scratch,scratch,0.626326746351686,True,True
+test,770,3925,003925.jpg,scratch,True,64.24,120.39,1000,740,front,complete,gray,0.010451153513513512,6,False,scratch,scratch,0.5466108798206605,True,True
+test,771,3925,003925.jpg,glass shatter,True,478.81,125.95,1000,740,front,complete,gray,0.08149475608108109,6,False,glass shatter,glass shatter,0.5818232288087483,True,True
+test,772,3925,003925.jpg,lamp broken,True,263.56,154.34,1000,740,front,complete,gray,0.05497006810810811,6,False,lamp broken,dent,0.5059055919516757,False,True
+test,773,3935,003935.jpg,dent,False,726.91,334.17,1000,750,side,partial,white,0.3238820196,1,False,dent,dent,0.9444759064099079,True,False
+test,774,3948,003948.jpg,dent,True,305.54,300.62,1000,667,front,partial,white,0.1377082980509745,5,False,dent,dent,0.6624099641308676,True,True
+test,775,3948,003948.jpg,scratch,True,319.04,227.48,1000,667,front,partial,white,0.10880842458770616,5,False,scratch,scratch,0.5795400418148046,True,True
+test,776,3948,003948.jpg,crack,True,25.94,79.15,1000,667,front,partial,white,0.003078187406296852,5,False,crack,crack,0.9052841943502044,True,True
+test,777,3948,003948.jpg,crack,True,22.25,88.71,1000,667,front,partial,white,0.00295921664167916,5,False,crack,crack,0.8717860057243251,True,True
+test,778,3948,003948.jpg,crack,True,83.36,119.68,1000,667,front,partial,white,0.014957308545727138,5,False,crack,crack,0.7553818775781865,True,True
+test,779,3956,003956.jpg,scratch,True,328.96,279.41,1000,619,front,partial,gray,0.1484890365105008,1,False,scratch,scratch,0.7988934105394202,True,True
+test,780,3959,003959.jpg,glass shatter,True,1000.0,750.0,1000,750,front,partial,,1.0,1,False,glass shatter,glass shatter,0.994657971528837,True,True
+test,781,3977,003977.jpg,glass shatter,True,1000.0,662.0,1000,662,front,partial,,1.0,1,False,glass shatter,glass shatter,0.9981259775968581,True,True
+test,782,3992,003992.jpg,dent,True,429.86,428.35,1000,667,rear,complete,gray,0.27605776761619194,1,False,dent,dent,0.9529084009920745,True,True
+test,783,3993,003993.jpg,glass shatter,True,1000.0,667.0,1000,667,,partial,,1.0,1,False,glass shatter,glass shatter,0.9919477230621837,True,True
+test,784,3994,003994.jpg,crack,True,537.67,336.38,1000,667,,partial,black,0.2711565736131934,2,False,crack,scratch,0.5262088533923759,False,True
+test,785,3994,003994.jpg,crack,True,163.98,113.02,1000,667,,partial,black,0.027785636581709145,2,False,crack,scratch,0.6899239002071532,False,True
