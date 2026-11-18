@@ -63,7 +63,21 @@ python -m pip install -r requirements.txt
 python -m pytest -v
 ```
 
-Résultat attendu : `17 passed`.
+Résultat attendu : `34 passed`.
+
+Pour lancer un seul fichier de tests (plus rapide quand on travaille sur une partie précise) :
+
+```bat
+python -m pytest tests/test_coco_loader.py -v
+python -m pytest tests/test_cleaning.py -v
+python -m pytest tests/test_features.py -v
+```
+
+| Fichier | Ce qu'il vérifie | Résultat attendu |
+|---|---|---|
+| `test_coco_loader.py` | lecture des JSON COCO et de `image_info.xlsx` | `10 passed` |
+| `test_cleaning.py` | contrôles qualité, SHA-256/pHash, quasi-doublons, politique de nettoyage | `7 passed` |
+| `test_features.py` | recadrage, patch 128×128, dimensions HOG/couleur/texture (1764/40/36), pas de NaN | `17 passed` |
 
 Pour régénérer le rapport de doublons (SHA-256 + pHash, environ 5 minutes) dans `reports/duplicates/` :
 
@@ -74,7 +88,37 @@ python -m src.data.duplicate_report
 ### 7. Ouvrir les notebooks
 
 Dans VS Code : `Ctrl+Shift+P` → **Python: Select Interpreter** → `.venv\Scripts\python.exe`,
-puis ouvrir les notebooks dans l'ordre (`notebooks/01_eda.ipynb`, `notebooks/02_data_cleaning.ipynb`) et choisir le noyau `.venv`.
+puis ouvrir les notebooks dans l'ordre et choisir le noyau `.venv` :
+
+| Notebook | Contenu | Durée d'exécution |
+|---|---|---|
+| `01_eda.ipynb` | exploration du dataset | ≈ 1 min |
+| `02_data_cleaning.ipynb` | contrôle qualité, quasi-doublons, décisions de nettoyage | ≈ 5 min |
+| `03_feature_engineering.ipynb` | conversion des régions en vecteurs, choix mesurés des descripteurs | ≈ 15 min |
+
+### 8. Calculer les descripteurs (phase 3)
+
+Les descripteurs ne sont pas sur GitHub (fichiers de plusieurs centaines de Mo). Pour les régénérer avec la configuration retenue
+(≈ 30 s) dans `data/processed/features_s128_m00_stretch.npz` :
+
+```bat
+python -m src.features.build_dataset
+```
+
+Options : `--size 64 --margin 0.15 --mode pad` pour tester une autre configuration, `--force` pour recalculer un fichier existant.
+
+## Notes importantes
+
+- **Terminal** : la commande d'activation dépend du terminal (cmd, PowerShell ou Git Bash, voir étape 4). Si `python` ne trouve pas un module
+  (`No module named pytest`…), c'est presque toujours que le `.venv` n'est pas activé.
+- **Copier-coller dans Git Bash** : si la commande apparaît entourée de `[200~ … ~`, la retaper ou coller avec clic droit → *Paste*.
+- **Le dataset original n'est jamais modifié.** Le nettoyage produit des tables de décisions dans `reports/cleaning/` ;
+  la table de travail est `reports/cleaning/regions.csv` (une ligne = une zone endommagée).
+- **Valeurs manquantes de `image_info.xlsx`** (`shooting angle` : 440, `color` : 344) : laissées telles quelles, car ces colonnes ne sont pas
+  des entrées du modèle ; elles servent seulement à l'analyse des erreurs.
+- **Le test n'est jamais utilisé pour faire un choix** (prétraitement, descripteurs, hyperparamètres) : tous les choix se font sur la validation propre.
+- **Recadrage dans l'application** : le modèle est entraîné sur la zone exacte du dommage (sans marge) ; l'utilisateur doit recadrer **au plus près** du dommage.
+- **Fichiers régénérables non versionnés** : `data/processed/` (descripteurs) et, plus tard, `models/` (modèles entraînés).
 
 ## Données utilisées
 
@@ -151,3 +195,24 @@ la pondération des classes rééquilibre l'apprentissage sans perdre ni invente
 
 Le score sur le **train** n'est jamais utilisé pour juger le modèle, mais il est comparé au score de validation pour
 détecter le **surapprentissage** (train très élevé et validation faible = le modèle a mémorisé les photos).
+
+### Conversion des images en vecteurs (phase 3)
+
+```
+photo ─► découpe de la bbox (sans marge) ─► patch 128×128 ─► HOG (1764) + couleur (40) + texture (36) ─► 1840 valeurs
+```
+
+| Choix | Valeur retenue | Pourquoi (mesuré sur la validation propre) |
+|---|---|---|
+| Marge autour de la bbox | aucune | 5 à 30 % de contexte dégradent le F1 macro |
+| Taille du patch | 128 × 128 | meilleure que 64 et 96 ; 192 n'apporte rien et coûte 2 × plus |
+| Redimensionnement | déformation au carré (*stretch*) | meilleur que garder les proportions (*pad*) à 128 px |
+| HOG (forme) | gardé | meilleur bloc seul |
+| Texture (LBP + GLCM) | gardée | améliore nettement HOG |
+| Couleur (HSV + Lab) | gardée | faible seule, mais améliore encore HOG + texture |
+| Label Encoding | pour la cible | 6 classes → 0..5, même correspondance dans l'API |
+| One-Hot / Leave-One-Out | non | aucune variable d'entrée catégorielle |
+| StandardScaler | oui, dans le pipeline | échelles très différentes ; ajusté sur le train uniquement |
+| MinMaxScaler | non | sensible aux valeurs extrêmes, pas meilleur |
+| PCA | testée en phase 4 | aide fortement KNN (malédiction de la dimension) |
+| Discrétisation | non | variables déjà sous forme d'histogrammes |
