@@ -43,8 +43,13 @@ py -3.11 -m venv .venv
   .\.venv\Scripts\Activate.ps1
   ```
   Si PowerShell refuse : `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, puis réessayer.
+- **Git Bash** — invite `MINGW64 ~/...$` :
+  ```bash
+  source .venv/Scripts/activate
+  ```
 
-L'invite doit commencer par `(.venv)`.
+L'invite doit commencer par `(.venv)`. Sans activation, on peut toujours appeler directement
+`.venv\Scripts\python.exe` (cmd/PowerShell) ou `.venv/Scripts/python.exe` (Git Bash) à la place de `python`.
 
 ### 5. Installer les dépendances (une seule fois)
 
@@ -108,3 +113,41 @@ chaque dommage annoté est découpé selon sa bounding box, puis classé. Seules
 Ils ne sont **jamais** des variables du modèle, car l'utilisateur ne les fournit pas dans l'application. Ils servent uniquement à analyser
 les erreurs (par exemple : le modèle se trompe-t-il davantage sur les voitures noires ?).
 
+
+## Méthodologie
+
+### Division train / validation / test
+
+Nous conservons la **division officielle** fournie par les auteurs de CarDD (dossiers `train2017/`, `val2017/`, `test2017/`) :
+elle rend nos résultats comparables aux autres travaux et évite d'ajuster la division à notre avantage.
+
+| Split | Photos | Régions | Régions « propres » | Rôle |
+|---|---|---|---|---|
+| train | 2816 (70 %) | 6211 | 6211 | apprentissage |
+| val | 810 (20 %) | 1744 | 1666 | comparer les modèles et choisir les hyperparamètres |
+| test | 374 (10 %) | 785 | 761 | score final, utilisé **une seule fois** à la fin |
+
+- La division se fait **par photo** : toutes les zones d'une même photo sont dans le même split
+  (sinon le modèle reconnaîtrait la photo plutôt que le dommage).
+- Les 6 classes ont les **mêmes proportions** dans les trois splits : les scores de validation et de test sont représentatifs.
+- **Aucun doublon exact** (SHA-256), mais **40 paires de photos quasi identiques entre splits** (même photo recolorée,
+  en miroir ou éclaircie). Elles sont exclues de l'évaluation « propre » sans modifier la division officielle
+  (`image_eval_keep` dans `reports/cleaning/regions.csv`). Le score final sera donné sur le test officiel **et** sur le test propre.
+- Le test ne sert **jamais** à choisir un modèle ou un réglage : sinon son score deviendrait optimiste.
+
+### Déséquilibre des classes
+
+Dans le train, *scratch* représente 41 % des régions (2560) et *tire flat* 3,6 % (225), soit un rapport d'environ 11.
+Ce n'est pas une erreur de division (les proportions sont identiques dans les trois splits) : c'est la fréquence réelle des dommages dans le dataset.
+
+| Risque | Parade |
+|---|---|
+| Le modèle privilégie *scratch* | `class_weight="balanced"` pour SVM et Random Forest (comparé avec/sans) ; vote pondéré par la distance testé pour KNN |
+| Un score trompeur : répondre toujours « scratch » donne déjà 39 % d'accuracy sur le test | métrique principale = **F1 macro** (même poids pour chaque classe), F1 par classe et matrice de confusion |
+| Ne pas savoir si un modèle est réellement utile | **baseline** `DummyClassifier` (classe majoritaire) que nos modèles doivent nettement dépasser |
+
+Nous ne rééquilibrons pas en supprimant des *scratch* (perte d'information) ni en dupliquant les *tire flat* (risque de mémorisation) :
+la pondération des classes rééquilibre l'apprentissage sans perdre ni inventer de données.
+
+Le score sur le **train** n'est jamais utilisé pour juger le modèle, mais il est comparé au score de validation pour
+détecter le **surapprentissage** (train très élevé et validation faible = le modèle a mémorisé les photos).
