@@ -1,3 +1,4 @@
+
 # AutoDamage ML
 
 Classification du type de dommage automobile (Machine Learning classique) à partir du dataset [CarDD](https://cardd-ustc.github.io/).
@@ -63,3 +64,5 @@ Résultat attendu : `10 passed`.
 
 Dans VS Code : `Ctrl+Shift+P` → **Python: Select Interpreter** → `.venv\Scripts\python.exe`,
 puis ouvrir `notebooks/01_eda.ipynb` et choisir le noyau `.venv`.
+
+# Auto_dammage
