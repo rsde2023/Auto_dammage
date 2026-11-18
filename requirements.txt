@@ -1,0 +1,29 @@
+# AutoDamage ML — dépendances Python (testé avec Python 3.11.7 sous Windows)
+# Installation : python -m pip install -r requirements.txt
+
+# --- Machine Learning classique / traitement d'image ---
+numpy==2.4.6
+pandas==3.1.1
+scikit-learn==1.9.1
+scikit-image==0.26.0
+opencv-python==5.1.0.95
+joblib==1.6.0
+
+# --- Visualisation ---
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# --- Utilitaires de lecture ---
+openpyxl==3.1.5      # lecture de image_info.xlsx par pandas
+pillow==13.0.0       # lecture rapide des dimensions (en-tête JPEG) dans l'EDA ; déjà requis par matplotlib
+
+# --- Notebooks ---
+jupyter==1.1.1
+ipykernel==7.4.0
+nbformat==5.11.1
+nbconvert==7.17.2
+
+# --- Tests ---
+pytest==9.2.0
+
+# Le backend (FastAPI, uvicorn) sera ajouté lors de la phase API.

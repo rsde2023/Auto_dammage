@@ -1,0 +1,45 @@
+# ---------- Python ----------
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- Données (jamais versionnées) ----------
+dataset/
+data/processed/
+*.npy
+*.npz
+
+# ---------- Modèles et résultats volumineux ----------
+models/*.pkl
+models/*.joblib
+results/
+reports/generated/
+
+# ---------- Secrets ----------
+.env
+*.env
+*.key
+*.jks
+*.keystore
+local.properties
+
+# ---------- Android Studio / Gradle ----------
+android-app/.gradle/
+android-app/.idea/
+android-app/build/
+android-app/app/build/
+android-app/captures/
+android-app/.externalNativeBuild/
+android-app/.cxx/
+*.iml
+*.apk
+*.aab
+
+# ---------- Éditeurs / OS ----------
+.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store
