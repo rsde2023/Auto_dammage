@@ -63,7 +63,7 @@ python -m pip install -r requirements.txt
 python -m pytest -v
 ```
 
-Résultat attendu : `34 passed`.
+Résultat attendu : `44 passed`.
 
 Pour lancer un seul fichier de tests (plus rapide quand on travaille sur une partie précise) :
 
@@ -71,6 +71,7 @@ Pour lancer un seul fichier de tests (plus rapide quand on travaille sur une par
 python -m pytest tests/test_coco_loader.py -v
 python -m pytest tests/test_cleaning.py -v
 python -m pytest tests/test_features.py -v
+python -m pytest tests/test_models.py -v
 ```
 
 | Fichier | Ce qu'il vérifie | Résultat attendu |
@@ -78,6 +79,7 @@ python -m pytest tests/test_features.py -v
 | `test_coco_loader.py` | lecture des JSON COCO et de `image_info.xlsx` | `10 passed` |
 | `test_cleaning.py` | contrôles qualité, SHA-256/pHash, quasi-doublons, politique de nettoyage | `7 passed` |
 | `test_features.py` | recadrage, patch 128×128, dimensions HOG/couleur/texture (1764/40/36), pas de NaN | `17 passed` |
+| `test_models.py` | pipelines, recherche d'hyperparamètres, sauvegarde du modèle, prédiction avec le même prétraitement qu'à l'entraînement | `10 passed` |
 
 Pour régénérer le rapport de doublons (SHA-256 + pHash, environ 5 minutes) dans `reports/duplicates/` :
 
@@ -95,6 +97,7 @@ puis ouvrir les notebooks dans l'ordre et choisir le noyau `.venv` :
 | `01_eda.ipynb` | exploration du dataset | ≈ 1 min |
 | `02_data_cleaning.ipynb` | contrôle qualité, quasi-doublons, décisions de nettoyage | ≈ 5 min |
 | `03_feature_engineering.ipynb` | conversion des régions en vecteurs, choix mesurés des descripteurs | ≈ 15 min |
+| `04_modeling.ipynb` | KNN / SVM / Random Forest : réglage, comparaison, modèle retenu (après l'étape 9) | ≈ 3 min |
 
 ### 8. Calculer les descripteurs (phase 3)
 
@@ -107,6 +110,19 @@ python -m src.features.build_dataset
 
 Options : `--size 64 --margin 0.15 --mode pad` pour tester une autre configuration, `--force` pour recalculer un fichier existant.
 
+### 9. Entraîner les modèles (phase 4)
+
+Les modèles ne sont pas sur GitHub (fichiers volumineux). Cette commande règle les hyperparamètres de KNN, SVM et Random Forest
+sur la validation propre (résultats dans `reports/modeling/search_results.csv`), réentraîne le meilleur réglage de chaque famille
+sur train + val et l'enregistre dans `models/` (`knn.joblib`, `svm.joblib`, `rf.joblib`, et `selection.json` qui indique le modèle retenu) :
+
+```bat
+python -m src.models.train
+```
+
+Si `reports/modeling/search_results.csv` existe déjà (il est sur GitHub), la recherche n'est pas relancée : seuls les modèles finaux
+sont réentraînés (quelques minutes). `--force-search` relance toute la recherche (≈ 10 à 15 min).
+
 ## Notes importantes
 
 - **Terminal** : la commande d'activation dépend du terminal (cmd, PowerShell ou Git Bash, voir étape 4). Si `python` ne trouve pas un module
@@ -118,7 +134,11 @@ Options : `--size 64 --margin 0.15 --mode pad` pour tester une autre configurati
   des entrées du modèle ; elles servent seulement à l'analyse des erreurs.
 - **Le test n'est jamais utilisé pour faire un choix** (prétraitement, descripteurs, hyperparamètres) : tous les choix se font sur la validation propre.
 - **Recadrage dans l'application** : le modèle est entraîné sur la zone exacte du dommage (sans marge) ; l'utilisateur doit recadrer **au plus près** du dommage.
-- **Fichiers régénérables non versionnés** : `data/processed/` (descripteurs) et, plus tard, `models/` (modèles entraînés).
+- **Hyperparamètres** : choisis uniquement sur la validation propre (F1 macro) ; le test reste intact pour la phase 5.
+  Le modèle final est ensuite réentraîné sur train + val avec ces hyperparamètres.
+- **Probabilités du SVM** : un SVM ne donne pas de probabilités ; on utilise `CalibratedClassifierCV` (calibration de Platt).
+  `SVC(probability=True)` est déprécié depuis scikit-learn 1.9.
+- **Fichiers régénérables non versionnés** : `data/processed/` (descripteurs) et `models/` (modèles entraînés) : à régénérer avec les étapes 8 et 9.
 
 ## Données utilisées
 
@@ -216,3 +236,21 @@ photo ─► découpe de la bbox (sans marge) ─► patch 128×128 ─► HOG (
 | MinMaxScaler | non | sensible aux valeurs extrêmes, pas meilleur |
 | PCA | testée en phase 4 | aide fortement KNN (malédiction de la dimension) |
 | Discrétisation | non | variables déjà sous forme d'histogrammes |
+
+### Modélisation (phase 4)
+
+Entraînement sur train, choix des hyperparamètres sur la validation propre (F1 macro), test jamais utilisé
+(détails : `notebooks/04_modeling.ipynb`, résultats complets : `reports/modeling/search_results.csv`, 174 réglages testés).
+
+| Modèle | Meilleur réglage | F1 macro (val propre) |
+|---|---|---|
+| **SVM RBF (retenu)** | StandardScaler → PCA 400 → SVM, C = 10, gamma = scale, class_weight = balanced | **0,807** |
+| Random Forest | 300 arbres, max_features = sqrt, sans limite de profondeur, class_weight = balanced | 0,738 |
+| KNN | StandardScaler → PCA 100 → k = 5, distance cosinus | 0,659 |
+| Baseline (hasard stratifié) | — | 0,163 |
+
+- Le SVM est le meilleur sur chacune des 6 classes. Classe la plus difficile : *crack* (F1 0,61), souvent confondue avec *scratch*.
+- Surapprentissage (score train ≈ 1,0) mais la courbe d'apprentissage monte encore : le modèle final est réentraîné sur **train + val**.
+- Le déséquilibre est géré par `class_weight="balanced"` (SVM, RF) et par le choix du F1 macro.
+- Le modèle sauvegardé (`models/svm.joblib`) contient le pipeline, le LabelEncoder et les configurations de prétraitement :
+  l'API appellera `src/models/inference.py`, qui réutilise exactement le prétraitement de l'entraînement.

@@ -34,6 +34,15 @@ class FeatureConfig:
     def to_dict(self) -> dict:
         return asdict(self)
 
+    @classmethod
+    def from_dict(cls, d: dict) -> "FeatureConfig":
+        """Inverse de to_dict après un passage par JSON (les tuples y deviennent des listes)."""
+        d = dict(d)
+        d["blocks"] = tuple(d["blocks"])
+        d["lbp_scales"] = tuple(tuple(s) for s in d["lbp_scales"])
+        d["glcm_distances"] = tuple(d["glcm_distances"])
+        return cls(**d)
+
 
 def hog_features(gray: np.ndarray, cfg: FeatureConfig) -> np.ndarray:
     ppc = gray.shape[0] // cfg.hog_cells

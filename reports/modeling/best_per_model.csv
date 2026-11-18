@@ -1,0 +1,4 @@
+model,metric,n_neighbors,pca,weights,val_f1,train_f1,fit_s,predict_val_s,C,gamma_mult,gamma,class_weight,max_depth,max_features,min_samples_leaf,n_estimators,params,gap
+svm,,,400.0,,0.8065179365232694,0.9995060167232078,49.94,10.58,10.0,1.0,0.000587336253374815,,,,,,"{""model"": ""svm"", ""pca"": 400, ""C"": 10, ""gamma"": 0.000587336253374815, ""gamma_mult"": 1}",0.1929880801999384
+rf,,,,,0.7382975305884197,0.9993776275243252,9.0,0.18,,,,balanced,,sqrt,1.0,300.0,"{""model"": ""rf"", ""n_estimators"": 300, ""max_features"": ""sqrt"", ""min_samples_leaf"": 1, ""max_depth"": null, ""class_weight"": ""balanced""}",0.2610800969359055
+knn,cosine,5.0,100.0,uniform,0.6592347562413946,0.7902868830215869,0.01,0.52,,,,,,,,,"{""model"": ""knn"", ""pca"": 100, ""n_neighbors"": 5, ""weights"": ""uniform"", ""metric"": ""cosine""}",0.1310521267801923
