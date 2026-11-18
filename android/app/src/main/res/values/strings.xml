@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoDamage ML</string>
+    <string name="title_analyze">Analyser</string>
+    <string name="title_history">Historique</string>
+    <string name="title_result">Résultat</string>
+
+    <!-- Écran d'analyse -->
+    <string name="empty_title">Analyser un dommage</string>
+    <string name="empty_subtitle">Photographiez la carrosserie, puis encadrez la zone endommagée.</string>
+    <string name="take_photo">Prendre une photo</string>
+    <string name="pick_gallery">Choisir dans la galerie</string>
+    <string name="classes_info">Types reconnus : bosse, rayure, fissure, vitre brisée, phare cassé, pneu crevé. Un seul dommage par analyse.</string>
+    <string name="crop_instruction">Encadrez la zone endommagée au plus près : déplacez le cadre ou tirez sur ses coins.</string>
+    <string name="change_photo">Changer de photo</string>
+    <string name="analyze">Analyser</string>
+    <string name="analyzing">Analyse…</string>
+    <string name="no_camera">Aucune application appareil photo disponible.</string>
+    <string name="ok">OK</string>
+
+    <!-- Résultat -->
+    <string name="detected_damage">Dommage détecté</string>
+    <string name="confidence_value">Confiance : %1$s</string>
+    <string name="uncertain_message">Résultat incertain : le modèle hésite entre plusieurs types de dommage. Recadrez plus précisément ou reprenez la photo.</string>
+    <string name="top_classes">Classes les plus probables</string>
+    <string name="result_meta">Analyse du %1$s · modèle %2$s</string>
+    <string name="disclaimer_default">Estimation automatique indicative. Elle ne remplace pas l\'avis d\'un professionnel et ne constitue pas une expertise d\'assurance.</string>
+    <string name="new_analysis">Analyser une autre zone</string>
+    <string name="region_description">Zone analysée</string>
+
+    <!-- Historique -->
+    <string name="history_empty">Aucune analyse pour le moment.</string>
+    <string name="uncertain_chip">Incertain</string>
+    <string name="clear_history">Effacer l\'historique</string>
+    <string name="clear_history_title">Effacer l\'historique ?</string>
+    <string name="clear_history_message">Toutes les analyses enregistrées sur ce téléphone seront supprimées.</string>
+    <string name="history_item_description">%1$s, confiance %2$d %%</string>
+    <string name="history_date">%1$s · %2$s</string>
+    <string name="delete">Supprimer</string>
+    <string name="cancel">Annuler</string>
+
+    <!-- Serveur -->
+    <string name="server_title">Adresse du serveur</string>
+    <string name="server_url">URL de l\'API</string>
+    <string name="server_hint">Émulateur : %1$s. Téléphone réel : http://IP-du-PC:8000/ (même réseau Wi-Fi).</string>
+    <string name="server_test">Tester</string>
+    <string name="server_testing">Connexion…</string>
+    <string name="server_ok">Connecté : modèle %1$s chargé.</string>
+    <string name="server_no_model">Serveur joignable, mais aucun modèle chargé (python -m src.models.train).</string>
+    <string name="server_invalid">Adresse invalide</string>
+    <string name="save">Enregistrer</string>
+</resources>

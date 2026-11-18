@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/analyzeFragment">
+
+    <fragment
+        android:id="@+id/analyzeFragment"
+        android:name="com.autodamage.ml.ui.analyze.AnalyzeFragment"
+        android:label="@string/title_analyze">
+        <action
+            android:id="@+id/action_analyze_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.autodamage.ml.ui.history.HistoryFragment"
+        android:label="@string/title_history">
+        <action
+            android:id="@+id/action_history_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.autodamage.ml.ui.result.ResultFragment"
+        android:label="@string/title_result">
+        <argument
+            android:name="recordId"
+            app:argType="long" />
+    </fragment>
+</navigation>

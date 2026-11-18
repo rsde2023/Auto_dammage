@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- L'API de développement tourne en HTTP sur le PC (émulateur : 10.0.2.2, téléphone : IP du PC sur le Wi-Fi).
+     HTTP en clair est donc autorisé pour ce projet universitaire ; une mise en production exigerait HTTPS. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

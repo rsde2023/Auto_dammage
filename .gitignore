@@ -27,13 +27,13 @@ reports/generated/
 local.properties
 
 # ---------- Android Studio / Gradle ----------
-android-app/.gradle/
-android-app/.idea/
-android-app/build/
-android-app/app/build/
-android-app/captures/
-android-app/.externalNativeBuild/
-android-app/.cxx/
+android/.gradle/
+android/.idea/
+android/build/
+android/app/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
 *.iml
 *.apk
 *.aab

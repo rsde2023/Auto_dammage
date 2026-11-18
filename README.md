@@ -3,15 +3,125 @@
 
 Classification du type de dommage automobile (Machine Learning classique) à partir du dataset [CarDD](https://cardd-ustc.github.io/).
 
-## Installation (Windows + VS Code)
+## Guide de démarrage après le clone
+
+> [!IMPORTANT]
+> **Le dataset, les descripteurs et les modèles ne sont PAS sur GitHub** (trop volumineux, exclus par `.gitignore`).
+> Après le clone, il faut **d'abord copier le dataset CarDD original**, puis **lancer 3 commandes** qui recalculent tout le reste.
+> Rien n'est à télécharger à la main en dehors du dataset : les bibliothèques s'installent avec `requirements.txt`.
+
+### Ce qui est sur GitHub et ce qu'il faut recréer
+
+| Élément | Sur GitHub ? | Comment l'obtenir |
+|---|---|---|
+| Code (`src/`, `tests/`, `android/`, `scripts/`), notebooks, README | oui | `git clone` |
+| Résultats légers (`reports/cleaning/`, `reports/duplicates/`, `reports/modeling/`, `reports/evaluation/`) | oui | `git clone` |
+| **Dataset CarDD** (`dataset/CarDD_COCO/`, ≈ 3 Go) | **non** | **le copier à la main** (étape B) |
+| Environnement Python (`.venv/`) | non | étapes C et D |
+| Descripteurs (`data/processed/`, ≈ 50 Mo) | non | commande `build_dataset` (étape F) |
+| Modèles entraînés (`models/`) | non | commande `train` (étape F) |
+| Build Android (`android/app/build/`, `local.properties`) | non | créés automatiquement par Android Studio / Gradle |
+
+### Prérequis à installer une seule fois sur le PC
+
+| Logiciel | Pour quoi | Vérifier dans cmd |
+|---|---|---|
+| **Python 3.11** (cocher *Add python.exe to PATH*) | tout le projet | `py -3.11 --version` |
+| **Git** | cloner le projet | `git --version` |
+| **VS Code** + extensions *Python* et *Jupyter* | éditer, notebooks | — |
+| **Android Studio** (avec un émulateur, par exemple Pixel 6) | application Android uniquement | — |
+
+### Les étapes, dans l'ordre (terminal **cmd**, invite `C:\...>`)
+
+> [!TIP]
+> Toutes les commandes se lancent **à la racine du projet**. En PowerShell (`PS C:\...>`), seule l'activation change :
+> `.\.venv\Scripts\Activate.ps1` au lieu de `.venv\Scripts\activate.bat`.
+
+**A. Cloner le projet**
+```bat
+git clone https://github.com/rsde2023/Auto_dammage.git
+cd Auto_dammage
+```
+
+**B. Copier le dataset original (obligatoire, avant toute commande)**
+
+Récupérer le dossier `CarDD_COCO` de l'archive CarDD (`CarDD_release.zip` → `CarDD_release\CarDD_COCO`, à demander à ton binôme
+ou sur le site officiel de CarDD) et le copier **tel quel, sans rien modifier**, pour obtenir exactement :
+```text
+Auto_dammage/
+└── dataset/
+    └── CarDD_COCO/
+        ├── annotations/   image_info.xlsx, instances_train2017.json, instances_val2017.json, instances_test2017.json
+        ├── train2017/     2816 images
+        ├── val2017/       810 images
+        └── test2017/      374 images
+```
+
+**C. Créer l'environnement Python (une seule fois)**
+```bat
+py -3.11 -m venv .venv
+```
+
+**D. Activer l'environnement (à chaque nouveau terminal) et installer les bibliothèques (une seule fois)**
+```bat
+.venv\Scripts\activate.bat
+python -m pip install -r requirements.txt
+```
+L'invite doit commencer par `(.venv)`. Bibliothèques installées (versions figées dans `requirements.txt`) : numpy, pandas,
+scikit-learn **1.9.1** (ne pas mettre à jour), scikit-image, opencv-python, joblib, matplotlib, seaborn, openpyxl, pillow,
+jupyter, pytest, fastapi, uvicorn, python-multipart, httpx.
+
+**E. Vérifier l'installation**
+```bat
+python -m pytest -q
+```
+Résultat attendu à ce stade : `57 passed, 1 skipped` (le test ignoré a besoin du modèle, créé à l'étape F).
+Si on obtient `3 skipped`, le dataset n'est pas au bon endroit : revoir l'étape B.
+
+**F. Recréer les descripteurs, les modèles et l'évaluation (≈ 5 minutes au total)**
+```bat
+python -m src.features.build_dataset
+python -m src.models.train
+python -m src.evaluation.metrics
+```
+
+| Commande | Durée | Produit |
+|---|---|---|
+| `python -m src.features.build_dataset` | ≈ 30 s | `data/processed/features_s128_m00_stretch.npz` |
+| `python -m src.models.train` | ≈ 2 min | `models/svm.joblib`, `rf.joblib`, `knn.joblib`, `selection.json` |
+| `python -m src.evaluation.metrics` | ≈ 1 min | tableau des scores du test (SVM : F1 macro ≈ 0,77) |
+
+Puis `python -m pytest -q` doit afficher `58 passed`.
+
+**G. Lancer l'API, puis l'application** (deux terminaux à laisser ouverts, détails aux étapes 11 et 12 plus bas)
+```bat
+REM Terminal 1 : API
+.venv\Scripts\activate.bat
+uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+
+REM Terminal 2 : émulateur
+"%LOCALAPPDATA%\Android\Sdk\emulator\emulator.exe" -avd Pixel_6
+
+REM Terminal 3 (une fois Android démarré) : installer l'application
+cd android
+gradlew.bat installDebug
+```
+Ou, plus simple : Android Studio → **Open** → dossier `android/` → **Run ▶**.
+Photos de test dans l'émulateur : `scripts\envoyer_photos.bat dataset\CarDD_COCO\test2017\000040.jpg`.
+
+> [!NOTE]
+> **Facultatif** : rouvrir les notebooks (étape 7) et relancer le rapport de doublons (`python -m src.data.duplicate_report`, ≈ 5 min).
+> Leurs résultats sont déjà sur GitHub, il n'est pas nécessaire de les relancer pour utiliser le projet.
+
+## Détail des étapes (Windows + VS Code)
 
 Prérequis : **Python 3.11** et **Git** installés.
 
 ### 1. Récupérer le projet
 
 ```bat
-git clone https://github.com/VOTRE_COMPTE/autodamage-ml.git
-cd autodamage-ml
+git clone https://github.com/rsde2023/Auto_dammage.git
+cd Auto_dammage
 ```
 
 ### 2. Ajouter le dataset
@@ -63,7 +173,8 @@ python -m pip install -r requirements.txt
 python -m pytest -v
 ```
 
-Résultat attendu : `47 passed`.
+Résultat attendu : `58 passed` une fois les modèles entraînés (étape 9) ; avant : `57 passed, 1 skipped` ;
+sans dataset : `55 passed, 3 skipped`.
 
 Pour lancer un seul fichier de tests (plus rapide quand on travaille sur une partie précise) :
 
@@ -73,12 +184,14 @@ python -m pytest tests/test_cleaning.py -v
 python -m pytest tests/test_features.py -v
 python -m pytest tests/test_models.py -v
 python -m pytest tests/test_evaluation.py -v
+python -m pytest tests/test_api.py -v
 ```
 
 | Fichier | Ce qu'il vérifie | Résultat attendu |
 |---|---|---|
 | `test_coco_loader.py` | lecture des JSON COCO et de `image_info.xlsx` | `10 passed` |
 | `test_evaluation.py` | métriques (F1 macro, accuracy) et intervalle de confiance par bootstrap | `3 passed` |
+| `test_api.py` | API : réponse, bbox invalide, fichier illisible ou trop lourd, modèle absent, seuil « incertain » (+ test réel si le modèle est entraîné) | `11 passed` |
 | `test_cleaning.py` | contrôles qualité, SHA-256/pHash, quasi-doublons, politique de nettoyage | `7 passed` |
 | `test_features.py` | recadrage, patch 128×128, dimensions HOG/couleur/texture (1764/40/36), pas de NaN | `17 passed` |
 | `test_models.py` | pipelines, recherche d'hyperparamètres, sauvegarde du modèle, prédiction avec le même prétraitement qu'à l'entraînement | `10 passed` |
@@ -135,6 +248,66 @@ sont réentraînés (quelques minutes). `--force-search` relance toute la recher
 python -m src.evaluation.metrics
 ```
 
+### 11. Lancer l'API (phase 6)
+
+Après l'étape 9 (le modèle doit exister dans `models/`), dans un terminal où le `.venv` est activé :
+
+```bat
+uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+```
+
+- Laisser ce terminal ouvert pendant l'utilisation de l'application.
+- Documentation interactive (pour tester sans téléphone) : http://127.0.0.1:8000/docs
+- Vérification rapide : http://127.0.0.1:8000/health doit afficher `"model_loaded": true`.
+- `--host 0.0.0.0` rend l'API joignable depuis un vrai téléphone sur le même Wi-Fi ; Windows peut demander d'autoriser Python dans le pare-feu (accepter pour les réseaux privés).
+
+Test en ligne de commande avec une photo du test (Git Bash) :
+
+```bash
+curl -X POST http://127.0.0.1:8000/predict -F "image=@dataset/CarDD_COCO/test2017/000040.jpg" -F bbox_x=392.88 -F bbox_y=0 -F bbox_w=423.34 -F bbox_h=415.28
+```
+
+Résultat attendu : `"label_fr":"Phare cassé"` avec une confiance d'environ 0,95.
+
+### 12. Lancer l'application Android (phase 6)
+
+1. Android Studio → **Open** → choisir le dossier `android/` (pas la racine du projet). Attendre la fin de la synchronisation Gradle
+   (la première fois, Android Studio télécharge les bibliothèques ; il crée lui-même `local.properties`).
+2. Démarrer un émulateur (Device Manager, par exemple Pixel 6, Android 8 minimum) puis **Run ▶**.
+3. L'API de l'étape 11 doit tourner sur le PC : l'émulateur la joint à l'adresse `http://10.0.2.2:8000/` (réglage par défaut).
+4. **Mettre des photos du PC dans l'émulateur** (émulateur démarré), dans cmd à la racine du projet :
+
+   ```bat
+   scripts\envoyer_photos.bat "C:\chemin\vers\photo.jpg"
+   scripts\envoyer_photos.bat "C:\chemin\vers\un_dossier"
+   ```
+
+   Les photos sont copiées dans `Pictures/AutoDamage` et indexées par Android. Dans l'application : *Choisir dans la galerie* →
+   rubrique **Récent**, ou onglet **Albums** → *AutoDamage*. Autre méthode : glisser-déposer un `.jpg` sur la fenêtre de l'émulateur
+   (il arrive dans **Albums → Download**). « Prendre une photo » utilise une caméra simulée (scène 3D, pas de vraie voiture).
+5. **Vrai téléphone** : même réseau Wi-Fi que le PC, puis menu ⋮ → *Adresse du serveur* → `http://IP-du-PC:8000/`
+   (IP visible avec `ipconfig` dans cmd, ligne « Adresse IPv4 ») → *Tester* → *Enregistrer*.
+
+**Depuis VS Code, sans Android Studio** (ouvrir un nouveau terminal avec le **+** du panneau Terminal).
+Regarder l'invite : `C:\...>` = **cmd**, `PS C:\...>` = **PowerShell** — les commandes diffèrent.
+
+| Terminal | cmd (`C:\...>`) | PowerShell (`PS C:\...>`) | À laisser ouvert ? |
+|---|---|---|---|
+| 1 — API | `.venv\Scripts\activate.bat` puis `uvicorn src.api.main:app --host 0.0.0.0 --port 8000` | `.\.venv\Scripts\Activate.ps1` puis la même commande `uvicorn` | oui |
+| 2 — émulateur | `"%LOCALAPPDATA%\Android\Sdk\emulator\emulator.exe" -avd Pixel_6` | `& "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd Pixel_6` | oui |
+| 3 — installation | `cd android` puis `gradlew.bat installDebug` | `cd android` puis `.\gradlew.bat installDebug` | non |
+
+Attendre l'écran d'accueil d'Android dans l'émulateur avant le terminal 3, puis toucher l'icône **AutoDamage ML** (bleue, voiture blanche)
+dans la liste des applications (glisser vers le haut depuis le bas de l'écran). `emulator.exe -list-avds` affiche les noms d'émulateurs disponibles.
+
+En ligne de commande (sans Android Studio), depuis `android/` :
+
+```bat
+gradlew.bat assembleDebug testDebugUnitTest
+```
+
+Résultat attendu : `BUILD SUCCESSFUL`, 6 tests unitaires Java réussis, APK dans `android/app/build/outputs/apk/debug/app-debug.apk`.
+
 ## Notes importantes
 
 - **Terminal** : la commande d'activation dépend du terminal (cmd, PowerShell ou Git Bash, voir étape 4). Si `python` ne trouve pas un module
@@ -155,7 +328,19 @@ python -m src.evaluation.metrics
   et sous le seuil la réussite n'est que de 46 %.
 - **Fichiers régénérables non versionnés** : `data/processed/` (descripteurs) et `models/` (modèles entraînés) : à régénérer avec les étapes 8 et 9.
 - **Le test a été utilisé une seule fois** (phase 5), avec des modèles déjà choisis : ses scores ne doivent pas servir à modifier le modèle.
-- **Une prédiction n'est pas une expertise d'assurance** : l'application l'affichera comme une aide indicative.
+- **Une prédiction n'est pas une expertise d'assurance** : l'API renvoie et l'application affiche cet avertissement à chaque résultat.
+- **Limite : le modèle répond toujours l'une des 6 classes**, même pour une photo sans voiture (personne, objet) ou une voiture intacte :
+  c'est un classifieur à ensemble fermé, il n'a jamais vu d'exemple « autre chose ». Mesures (images de démonstration de scikit-image,
+  dont un portrait, et zones de voitures intactes de CarDD) : les détecteurs de nouveauté non supervisés (distance aux k plus proches voisins,
+  Mahalanobis, Isolation Forest, One-Class SVM) ne font pas mieux que le hasard (AUROC ≈ 0,5) avec nos descripteurs HOG/couleur/texture ;
+  la confiance du SVM est un peu plus basse sur ces images (médiane 0,62 sur le portrait contre 0,82 sur les vrais dommages)
+  mais seules 23 % passent sous le seuil « incertain ».
+- **Aucun code ML dans l'application Android ni dans l'API** : l'API appelle `src/models/inference.py`, qui réutilise exactement
+  le prétraitement de l'entraînement (même découpe, même patch 128×128, mêmes descripteurs).
+- **Émulateur ↔ PC** : `10.0.2.2` est l'adresse du PC vue depuis l'émulateur ; `127.0.0.1` dans l'émulateur désigne l'émulateur lui-même.
+- **HTTP en clair** autorisé dans l'application (`network_security_config.xml`) car l'API de développement n'a pas HTTPS ; une mise en production l'exigerait.
+- **Nombres envoyés à l'API** : toujours avec un point décimal (`Locale.US`) ; avec un téléphone en français, `12,5` serait refusé.
+- **Émulateur lent / « System UI isn't responding »** : choisir *Wait*, ou redémarrer l'émulateur (Device Manager → *Cold Boot Now*).
 
 ## Données utilisées
 
@@ -290,3 +475,36 @@ Modèles choisis en phase 4, réentraînés sur train + val, évalués **une seu
   (souvent pris pour scratch).
 - Probabilités fiables : à plus de 0,9 de confiance, 96 % de réussite.
 - Limite principale : le test utilise les bbox des annotateurs ; dans l'application, la qualité du recadrage par l'utilisateur comptera.
+
+### API et application Android (phase 6)
+
+```
+Application Android ──(photo + cadre, HTTP multipart)──► API FastAPI ──► DamagePredictor (même prétraitement qu'à l'entraînement) ──► SVM
+        ▲                                                    │
+        └────────────(classe, confiance, top 3, avertissement, JSON)┘
+```
+
+**API** (`src/api/main.py`)
+
+| Route | Rôle |
+|---|---|
+| `GET /health` | état du serveur, modèle chargé, classes |
+| `POST /predict` | `image` (fichier) + `bbox_x`, `bbox_y`, `bbox_w`, `bbox_h` (facultatifs, pixels) → classe, confiance, `uncertain`, top 3, avertissement |
+
+Erreurs gérées : 400 (fichier illisible ou vide), 413 (plus de 10 Mo), 422 (cadre incomplet ou hors de l'image), 503 (modèle non entraîné).
+
+**Application Android** (`android/`, Java + XML, Material Design 3, minSdk 26)
+
+| Couche | Classes |
+|---|---|
+| Activity / Fragments (affichage uniquement) | `MainActivity`, `AnalyzeFragment`, `ResultFragment`, `HistoryFragment`, `CropOverlayView` (cadre de recadrage) |
+| ViewModel (état, survit aux rotations) | `AnalyzeViewModel`, `ResultViewModel`, `HistoryViewModel` |
+| Repository (seul accès aux données) | `PredictionRepository` |
+| Retrofit (réseau) | `ApiService`, `ApiClient` |
+| Room (historique local) | `AppDatabase`, `PredictionDao`, `PredictionEntity` |
+
+Parcours : prendre ou choisir une photo → encadrer le dommage au plus près → *Analyser* → résultat (classe, confiance, 3 classes probables,
+bandeau « résultat incertain » sous 0,5, avertissement) → enregistré dans l'historique (consultable hors connexion).
+
+Le téléphone envoie la photo réduite à 1280 px maximum et le cadre en pixels ; c'est le **serveur** qui découpe la zone,
+avec la même fonction que pour l'entraînement.

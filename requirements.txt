@@ -26,4 +26,8 @@ nbconvert==7.17.2
 # --- Tests ---
 pytest==9.2.0
 
-# Le backend (FastAPI, uvicorn) sera ajouté lors de la phase API.
+# --- API (phase 6) ---
+fastapi==0.164.0
+uvicorn==0.54.0
+python-multipart==0.0.34   # réception des fichiers envoyés (multipart/form-data)
+httpx==0.28.1              # client HTTP des tests de l API (TestClient)
